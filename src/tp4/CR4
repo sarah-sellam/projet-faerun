@@ -1,0 +1,41 @@
+
+Un test unitaire
+est une méthode permettant de vérifier le bon fonctionnement d’une partie précise d’un logiciel,
+ou d’une portion d’un programme (appelée “unité” ou “module”). Dans notre cas, une classe.
+
+À quoi ça sert ?
+On écrit un test pour confronter une réalisation à sa spécification.
+Le test définit un critère d’arrêt (état ou sorties à l’issue de l’exécution) et permet de statuer sur le succès ou sur l’échec d’une vérification.
+Grâce à la spécification, on est en mesure de faire correspondre un état d’entrée donné à un résultat ou à une sortie.
+Le test permet de vérifier que la relation d’entrée / sortie donnée par la spécification est bel et bien réalisée.
+
+En résumé :
+Pour chaque méthode de nos classes, on vérifie que ce que l’on donne en entrée permet d’avoir le bon résultat en sortie.
+Et comme il existe généralement plusieurs types d’entrées possibles, on écrit plusieurs tests unitaires pour chaque méthode afin de couvrir ces différents cas.
+
+Quelle librairie allons-nous utiliser ?
+Dans le cadre de cette ressource R2.01, nous allons utiliser la librairie JUnit version 5.8.
+JUnit étant un framework open-source pour le développement et l’exécution de tests unitaires automatisables.
+
+
+
+Pour se faire, vous utilisez la méthode assertEquals(Object expected, Object actual, String message) qui vérifie que les deux premiers paramètres sont égaux, sinon le test sera faux.
+
+
+IMPORTANT : Plusieurs méthodes « assert » sont fournies avec la librairie JUnit,
+pour connaître toutes les méthodes qui vous seront utiles dans la suite : https://junit.org/junit5/docs/5.8.2/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html
+
+
+
+Détaillons la méthode assertThrows(…) utilisée :
+
+    Premier paramètre, la classe d’exception attendue, ici IntituleException
+    Deuxième paramètre, un jeu d’instructions écrit sous la forme d’une lambda expression : (paramètres) -> { instructions; }. Ici, pas de paramètre et une seule instruction la création d’un article avec un intitulé null ou vide.
+    Troisième paramètre, un message si le test n’est pas valide
+
+
+
+
+    assertTrue(boolean condition) : vérifie que la condition soit vraie
+    assertFalse(boolean condition) : vérifie que la condition soit fausse
+    assertDoesNotThrow(…) : vérifie que le jeu d’instruction ne renvoie pas d’exception

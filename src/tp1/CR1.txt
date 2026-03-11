@@ -1,0 +1,87 @@
+Documentations :
+
+Documentation (“JavaDoc”) de la classe Scanner : https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Scanner.html
+Documentation (JavaDoc) de la classe String : https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html
+JavaDoc de la classe StringBuilder : https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/StringBuilder.html
+====================================================================================================================================
+La classe Scanner propose 14 constructeurs.
+
+Parmi toutes les méthodes fournies par cette classe, celles déjà utilisées en R1.01 sont :
+nextBoolean()
+nextDouble()
+nextFLoat
+nextInt()
+nextLine()
+nextLong()
+
+Intérêt de l'encapsulation
+permet d'avoir des objets protègés -> Éviter la modification des objets par d'autres classes
+garantir cohérence des objets
+Comment ?
+en mettant des attributs en privés
+on accede
+en créant des setters
+
+Pour vérifier, si un objet existe vous pouvez vérifier s’il n’est pas null (adresse != null)
+et vous pouvez dans le cas d’un String vérifier aussi s’il n’est pas vide avec la méthode isEmpty().
+
+Creation d'un objet
+Etudiant toto = new Etudiant()
+Type    nom_var = new Objet/Instance() // on appelle les constructeurs de la classe (si plusieurs constructeurs alors PAS les MEMES paramètres)
+
+this. -> represente l'objet courant
+this.login fait reference au login de l'etudiant "courant"
+
+
+
+
+utiliser un “tableau statique“ de 5 nombres réels (double[5]).
+
+    // OPTION 1 : Vous déclarez et initialisez votre tableau en même temps avec :
+    private double[] notes = new double[5];
+
+    // OPTION 2 : Vous déclarez votre tableau parmis les attributs,
+    //  et vous l'initialisez dans le constructeur de votre classe :
+    private double[] notes;
+    // (...)
+    public Etudiant( /* (...) */ ) {
+        // (...)
+        notes = new double[5];
+    }
+
+
+
+
+
+
+
+
+super fait reference à la classe mère/parent
+ex classe mère Personne & classes fils Personnel, Etudiant
+
+UML = diagramme de classe
+
+2 types d'association : agrégation et composition
+
+!!!!!!!!!!!!!!!!!!!!!
+"-" = attribut privé
+!!!!!!!!!!!!!!!!!!!!!
+association != héritage
+
+
+
+Les boutons les plus importants du Debugger :
+
+ Resume Program : Continue l’exécution jusqu’au prochain breakpoint ;
+ Stop Program : Stoppe l’exécution du programme ;
+ Step Over : Exécute la ligne courante sans entrer dans la méthode (ou constructeur) appelé(e) ;
+ Step Into : Rentre dans le code de la méthode (ou constructeur) appelé(e) sur la ligne courante ;
+ Step Out : Sort de la méthode (ou du constructeur) appelé(e).
+
+
+
+
+Raccourcis :
+public static void main(String[] args) {...}     -> taper main puis appuyer sur Tab.
+System.out.println(...);    -> taper sout puis appuyer sur Entrée.
+

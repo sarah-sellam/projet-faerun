@@ -1,0 +1,48 @@
+Javadoc Treeset : https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/TreeSet.html
+
+
+UNE INTERFACE CEST COMME UNE CLASSE TOTALEMENT ABSTRAITE ON VA JUSTE DEFINIR DES METHODES (PAS d'instruction) A L'INTERIEUR
+
+on ne peut hériter que d'une seule classe
+
+Une classe hérite par défaut de la classe Object
+
+
+
+====================
+
+
+L’instruction this.getClass().getSimpleName() retourne le nom de la classe de l’objet courant. On vous invite à l’utiliser dans vos méthodes toString() afin d’afficher le nom de la classe courante.
+Vous pouvez, par exemple, testez en commençant par écrire :
+
+@Override
+public String toString() {
+  return this.getClass().getSimpleName();
+}
+
+
+Le mécanisme de polymorphisme s’applique ici : les billets réduits ne sont rien d’autres que des billets. Ces billets réduits peuvent donc être placés dans une liste de billets.
+Cependant, les méthodes appelées seront bien les méthodes de leur classe « d’origine » (Billet ou BilletReduit).
+
+
+Comme expliqué dans le cours (cf. le cours 3), pour que la classe Etudiant implante l’interface Comparable, on va devoir (re)définir (@override) la méthode compareTo() de cette interface.
+Pour plus de détails, vous pouvez consulter la documentation officielle de cette interface : Interface Comparable<T> (java.lang).
+
+
+CONSEIL : Pour réaliser la méthode compareTo(…) de la classe Etudiant, vous pouvez utiliser la méthode compareTo(…) de la classe String.
+Pensez à regarder la documentation pour savoir ce qu’elle retourne selon les différents cas : W3Schools - Java String compareTo() Method.
+
+La variable mesEtudiantsTries est de type TreeSet pour pouvoir stocker étudiants dans une collection qui utilise “l’ordre naturel” établi par la comparaison.
+
+
+
+
+ La classe Etudiant implantant déjà un “ordre naturel”, il faut passer par un comparateur séparé (*pour définir un “ordre secondaire” en définissant un comparateur qui implante Comparator).
+
+Pour réaliser cela, vous aurez le choix d’utiliser une des 2 solutions présentées dans le cours :
+
+    Solution 1 (Slide 21) : Soit une classe comparateur autonome (dans une classe à part, donc dans un fichier à part)
+    Solution 2 (Slide 22) : Soit un comparateur static final défini dans Etudiant (sous la forme d’un attribut de la classe Etudiant)
+
+
+

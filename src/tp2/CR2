@@ -1,0 +1,78 @@
+Dans une classe fille, vous pouvez utiliser les méthodes de la classe mère que vous êtes en train de redéfinir à l’aide du mot clé super..
+Par exemple : super.getAdresse() permet d’appeler la méthode getAdresse() de la classe mère.
+Ceci est utile si vous souhaitez réutiliser, ou retraiter une information de la classe mère.
+
+
+
+REMARQUE concernant les mots-clés de l’héritage :
+
+    Le mot-clé extends permet de définir que votre classe hérite d’une autre classe.
+
+    Le mot-clé super permet d’appeler le constructeur de sa classe mère (comme visible dans le code ci-dessus),
+    mais super permet également d’appeler une méthode de la classe mère (en faisant, par exemple : super.getAdresse())
+
+
+Sinon on ne def pas de classe mère
+la classe Object est def comme la classe mère par défaut
+
+super fait reference à la classe mère
+
+super(paramètres du constructeur de la classe mère)
+super.méthode de la classe mère
+
+this optionnel pour getAdresse
+
+
+
+enrichir une classe avec les méthodes de la classe mère :
+surcharge(nom identique mais signature différente & redéfinition(même signature(même nom et mêmes paramètres) override!)
+
+public class MereClasse {
+...
+public void m a M e t h o d e (int i)
+{...}
+}
+
+SURCHARGE
+    public class FilleClasse1 extends MereClasse {
+    ...
+    public void m a M e t h o d e (double i) {...}
+    }
+    → 2 méthodes maMethode
+
+REDEFINITION
+    public class FilleClasse2 extends MereClasse {
+    ...
+    @Override
+    public void m a M e t h o d e (int i) {...}
+    }
+    → 1 méthode maMethode
+
+
+Classe abstraite (!= concrète par défaut)
+on ne peut plus creer d'objets de la classe
+MAIS on peut definir des methodes abstraites
+
+une classe abstraite (abstract).
+Dans un diagramme UML ceci se traduit par un nom écrit en italique,
+
+POURQUOI rendre une classe abstraite ? On considère ici que la classe Personne n’a d’intérêt
+que pour la mise en commun d’un état et de comportements (attributs et méthodes) pour ses classes filles.
+On ne souhaite plus créer des personnes, mais seulement soit du personnel, soit des étudiants.
+
+La classe abstraite Personne reste cependant un type que l’on pourra utiliser pour regrouper du personnel et des étudiants si nécessaire.
+
+Pour rappel, une classe abstraite ne peut pas créer d’objet, mais vous pouvez l’utiliser en tant que type,
+comme par exemple, avec la liste de Personne dans laquelle on ajoute des étudiants et du personnel,
+qui ne sont rien d’autres que des personnes (par héritage).
+
+
+méthode non-interactive =(aucune demande à l’utilisateur par le terminal)
+
+AIDE : En Java, une constante se définit généralement avec la combinaison de mots-clés public static final : java public static final int ECHELON_MIN = 1;
+Détails sur cette définition :
+    static indique que c’est un attribut de classe (et non un attribut “classique”, d’objet). Cela signifie qu’une seule valeur existe pour toute la classe, partagée par toutes les instances.
+    final indique que la valeur ne pourra plus être modifiée après son initialisation. La valeur restera à 1 dans ce cas précis.
+    Et par convention, on écrit une constante en MAJUSCULES.
+
+Pour information, cette méthode toString() sera alors une redéfinition de la méthode toString() de la classe Object, qui correspond à la classe “de base” dont toutes les classes héritent par défaut.
