@@ -1,0 +1,5 @@
+PB sans iterateur :
+valeur à supprimer ignorée
+ex : itérateur à 3 -> supprime l'élément à 3 puis passe au 5e (car le 4e est passé en 3e suite à la suppression du 3e)
+
+
