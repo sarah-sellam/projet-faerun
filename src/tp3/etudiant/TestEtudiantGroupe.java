@@ -1,5 +1,8 @@
 package tp3.etudiant;
 
+/**
+ * Classe TestEtudiantGroupe de test des classes Etudiant et Groupe
+ */
 public class TestEtudiantGroupe {
     public static void main(String[] args) {
         // Créer des groupes

@@ -1,7 +1,7 @@
 package tp1.universite;
 
 /**
- * Classe des groupes
+ * Classe Groupe, de définition et de gestion des groupes (des étudiants)
  * @author Sarah Sellam
  */
 public class Groupe {

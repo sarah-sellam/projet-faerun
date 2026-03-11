@@ -1,10 +1,14 @@
 package tp1.forme;
 
 /**
- * Classe TestCercle
+ * Classe TestCercle de test de la classe Cercle
  * @author Sarah Sellam
  */
 public class TestCercle {
+    /**
+     * Méthode principale
+     * @param args  arguments
+     */
     public static void main(String[] args) {
         // Créer un point
         Point point = new Point(0,2);

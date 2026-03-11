@@ -1,7 +1,7 @@
 package tp1.universite;
 
 /**
- * Classe des étudiants
+ * Classe Etudiant, de définition et de gestion des étudiants
  * @author Sarah Sellam
  */
 public class Etudiant {
@@ -197,7 +197,6 @@ public class Etudiant {
             nbNotes++;
         }
     }
-
 
 
     //========================================================

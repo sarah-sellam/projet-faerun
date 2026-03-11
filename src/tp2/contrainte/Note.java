@@ -3,7 +3,6 @@ package tp2.contrainte;
 /**
  * Classe Note qui hérite de la classe ReelContraint qui va permettre de représenter
  * des notes obtenues par les étudiants. Une note étant bien sûr comprise entre 0 et 20.
- * @autor Sarah Sellam
  */
 public class Note extends ReelContraint {
     public static final double NOTE_MIN = 0;

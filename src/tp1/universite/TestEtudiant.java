@@ -1,10 +1,16 @@
 package tp1.universite;
 
 /**
- * Classe TestEtudiant
+ * Classe TestEtudiant, de test des classes Etudiant et Groupe
  * @author Sarah Sellam
  */
 public class TestEtudiant {
+
+    /**
+     * Méthode principale
+     *
+     * @param args arguments
+     */
     public static void main(String[] args) {
 //        String chaine = "sellams";
 //        System.out.println(EtudiantUtilitaire.capitalize(chaine));

@@ -74,8 +74,8 @@ public class Trajet {
 
     /**
      * Modifier la distance du trajet, en la bornant par son min ou son max :
-     * si la distance donnée est < 5, la distance prend comme valeur 5
-     * et si la distance donnée est > 2000, la distance prend comme valeur 2000.
+     * si la distance donnée est strictement inférieure à 5, la distance prend comme valeur 5
+     * et si la distance donnée est strictement supérieure à 2000, la distance prend comme valeur 2000.
      *
      * @param distance  la distance du trajet
      */

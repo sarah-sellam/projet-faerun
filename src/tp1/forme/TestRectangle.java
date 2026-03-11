@@ -1,10 +1,14 @@
 package tp1.forme;
 
 /**
- * Classe TestRectangle
+ * Classe TestRectangle, de test de la classe Rectangle
  * @author Sarah Sellam
  */
 public class TestRectangle {
+    /**
+     * Méthode principale
+     * @param args  arguments
+     */
     public static void main(String[] args) {
         // Créer un rectangle
         Rectangle rectangle = new Rectangle(2, 4, 2, 3);

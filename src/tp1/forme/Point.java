@@ -1,7 +1,7 @@
 package tp1.forme;
 
 /**
- * Classe Point
+ * Classe Point de définition d'un objet de type Point
  * @author Sarah Sellam
  */
 public class Point {

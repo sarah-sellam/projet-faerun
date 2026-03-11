@@ -1,7 +1,7 @@
 package tp1.forme;
 
 /**
- * Classe Rectangle
+ * Classe Rectangle de définition d'un objet de type rectangle
  * @author Sarah Sellam
  */
 public class Rectangle {

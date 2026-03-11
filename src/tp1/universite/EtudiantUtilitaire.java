@@ -3,10 +3,11 @@ package tp1.universite;
 import java.util.Arrays;
 
 /**
- * Classe Utilitaire
+ * Classe EtudiantUtilitaire, classe utilitaire
  * @author Sarah Sellam
  */
 public class EtudiantUtilitaire {
+
     /**
      * Retourne une chaine de caractère avec le premier caractère en majuscule et les autres en minuscule.
      *

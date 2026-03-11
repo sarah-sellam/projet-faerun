@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 /**
  * Classe ContrainteUtilitaire
- * @autor Sarah Sellam
  */
 public class ContrainteUtilitaire {
 

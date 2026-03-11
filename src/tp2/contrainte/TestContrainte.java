@@ -4,7 +4,6 @@ import java.sql.SQLOutput;
 
 /**
  * Classe TestContrainte
- * @autor Sarah Sellam
  */
 public class TestContrainte {
     public static void main(String[] args) {

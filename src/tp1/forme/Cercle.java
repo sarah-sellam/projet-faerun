@@ -1,7 +1,7 @@
 package tp1.forme;
 
 /**
- * Classe de définition d'un cercle
+ * Classe Cercle de définition d'un objet de type cercle
  * @author Sarah Sellam
  */
 public class Cercle {

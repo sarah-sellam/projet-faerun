@@ -3,7 +3,6 @@ package tp2.contrainte;
 /**
  * Classe ReelContraint qui permet de définir des réels
  * pour lesquels on assure que leur valeur est comprise dans un intervalle fixé par une valeur minimale (min) et une valeur maximale (max).
- * @autor Sarah Sellam
  */
 public class ReelContraint {
     private double min;

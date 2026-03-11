@@ -1,10 +1,14 @@
 package tp1.forme;
 
 /**
- * Classe TestPoint
+ * Classe TestPoint de test de la classe Point
  * @author Sarah Sellam
  */
 public class TestPoint {
+    /**
+     * Méthode principale
+     * @param args  arguments
+     */
     public static void main(String[] args) {
         // Créer un objet point1 de type Point
         //  avec le constructeur par défaut Point()
