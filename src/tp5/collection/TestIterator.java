@@ -54,35 +54,39 @@ public class TestIterator {
         CollectionUtilitaire.afficheCollection("Deuxième liste d'entiers après filtre :", deuxiemeListeDEntiers);
 
 
-
-
         // Création d'une troisième liste d'entiers
-        ArrayList<Integer> troisiemeListeDEntiers = new ArrayList<>(premiereListeDEntiers);
+        ArrayList<Integer> troisiemeListeDEntiers = new ArrayList<>();
+        troisiemeListeDEntiers.add(5);
+        troisiemeListeDEntiers.add(1);
+        troisiemeListeDEntiers.add(10);
+        troisiemeListeDEntiers.add(3);
+        troisiemeListeDEntiers.add(20);
+        troisiemeListeDEntiers.add(5);
 
         // Affichage de la troisième liste d'entiers
         CollectionUtilitaire.afficheCollection("Troisème liste d'entiers :", troisiemeListeDEntiers);
 
         // Enlever les entiers inférieurs à 10 dans la troisième liste d’entiers en parcourant son iterator
         // version while
-        Iterator itr = troisiemeListeDEntiers.iterator();
-        while(itr.hasNext()) {
-            Integer a = (Integer) itr.next();
-
+        Iterator it = troisiemeListeDEntiers.iterator();
+        while(it.hasNext()) {
+            Integer a = (Integer) it.next();
+            if (a < 10) {
+                it.remove();
+            }
         }
-
+/*
         // version for
-        for (Iterator i = troisiemeListeDEntiers.iterator(); i.hasNext(); ) {
-            if (!cond(i.next()))
-                i.remove();
+        for (Iterator<Integer> itr = troisiemeListeDEntiers.iterator(); itr.hasNext(); ) {
+            if (itr.next() < 10) {
+                itr.remove();
+            }
         }
+*/
 
-        // Affichage de la 3ème liste d'entiers après filtre
-        CollectionUtilitaire.afficheCollection("Troisième liste d'entiers après filtre avec un ITERATOR :", troisiemeListeDEntiers);
-
-
-
+            // Affichage de la 3ème liste d'entiers après filtre
+            CollectionUtilitaire.afficheCollection("Troisième liste d'entiers après filtre avec un ITERATOR :", troisiemeListeDEntiers);
 
 
+        }
     }
-
-}
