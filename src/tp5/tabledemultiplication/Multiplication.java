@@ -22,7 +22,7 @@ public class Multiplication {
     // === Méthodes Setters ===
 
     public void setReponseUtilisateur(int reponse) throws ErreurMultiplicationException {
-        if (reponse != reponseUtilisateur) {
+        if (reponseUtilisateur != null && reponse != reponseUtilisateur) {
             throw new ErreurMultiplicationException("Votre réponse n'est pas correcte, réessayer !");
         }
         this.reponseUtilisateur = reponse;

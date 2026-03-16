@@ -3,7 +3,7 @@ package tp5.tabledemultiplication;
 import java.util.Scanner;
 
 public class TestTableDeMultiplication {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ErreurMultiplicationException {
         Scanner lecteur = new Scanner(System.in);
         int nb;
         int mode;
