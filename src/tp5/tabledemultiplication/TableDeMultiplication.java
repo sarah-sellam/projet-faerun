@@ -11,6 +11,7 @@ public class TableDeMultiplication {
 
     private ArrayList<Multiplication> multiplications;
 
+    private Boolean modeSansErreur;
 
     //========================================================
     // === Constructeurs ===
@@ -22,6 +23,8 @@ public class TableDeMultiplication {
         if (estMelange) {
             melange();
         }
+
+        this.modeSansErreur = modeSansErreur;
     }
 
 
