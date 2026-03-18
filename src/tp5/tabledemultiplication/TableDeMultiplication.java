@@ -11,20 +11,21 @@ public class TableDeMultiplication {
 
     private ArrayList<Multiplication> multiplications;
 
-    private Boolean modeSansErreur;
+    private boolean modeSansErreur = false;
 
     //========================================================
     // === Constructeurs ===
-    public TableDeMultiplication(int nombreTable, boolean estMelange) {
+    public TableDeMultiplication(int nombreTable, boolean estMelange, boolean modeSansErreur) throws ErreurMultiplicationException {
         this.nombreTable = nombreTable;
 
         this.multiplications = new ArrayList<>();
+        this.modeSansErreur = modeSansErreur;
+
         initialisation();
         if (estMelange) {
             melange();
         }
 
-        this.modeSansErreur = modeSansErreur;
     }
 
 
@@ -52,9 +53,9 @@ public class TableDeMultiplication {
     //========================================================
     // === Autres Méthodes ===
 
-    private void initialisation() {
+    private void initialisation() throws ErreurMultiplicationException {
         for ( int i = MIN_TABLE ; i <= MAX_TABLE ; i++ ) {
-            multiplications.add(new Multiplication(nombreTable, i));
+            multiplications.add(new Multiplication(nombreTable, i, modeSansErreur));
         }
     }
 

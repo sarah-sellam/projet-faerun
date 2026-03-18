@@ -4,17 +4,16 @@ public class Multiplication {
 
     private int terme1;
     private int terme2;
-    private Integer reponseUtilisateur;
+    private Integer reponseUtilisateur; //(Par défault, il est null)
 
-    private Boolean modeSansErreur;
+    private boolean modeSansErreur = false;
 
     //========================================================
     // === Constructeurs ===
 
-    public Multiplication(int terme1, int terme2) {
+    public Multiplication(int terme1, int terme2, boolean modeSansErreur) {
         this.terme1 = terme1;
         this.terme2 = terme2;
-
         this.modeSansErreur = modeSansErreur;
     }
 
