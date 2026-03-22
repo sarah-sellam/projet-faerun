@@ -85,7 +85,9 @@ public class TestTableDeMultiplication {
 
         }
         // affichage du résultat
-        System.out.print("Nombre de réponses justes : " + table.getNombreReponsesJustes());
+        if(!modeSansErreur) {
+            System.out.print("Nombre de réponses justes : " + table.getNombreReponsesJustes());
+        }
 
     }
 }
