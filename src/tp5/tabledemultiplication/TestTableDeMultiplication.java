@@ -3,15 +3,13 @@ package tp5.tabledemultiplication;
 import java.util.Scanner;
 
 public class TestTableDeMultiplication {
+    private static Scanner entree = new Scanner(System.in);
 
     private static void demandeReponseUtilisateur(Multiplication multiplication){
         // Affichage de la multiplication
         // (Cela appellera automatiquement la méthode toString() sur l'objet)
-        System.out.print(multiplication);
-
-        Scanner entree = new Scanner(System.in);
-
         do {
+            System.out.print(multiplication);
             // Demander la réponse utilisateur
             int reponseUtilisateur = entree.nextInt();
             entree.nextLine();
@@ -30,7 +28,7 @@ public class TestTableDeMultiplication {
 
 
     public static void main(String[] args) throws ErreurMultiplicationException {
-        Scanner lecteur = new Scanner(System.in);
+
         int nb;
         int modeEntOuExo;
         boolean modeSansErreur;
@@ -38,27 +36,27 @@ public class TestTableDeMultiplication {
 
         // Demande d'un nombre entre 1 et 10
         System.out.print("Donner un nombre pour la table de multiplication entre 1 et 10 : ");
-        nb = lecteur.nextInt();
-        lecteur.nextLine();
+        nb = entree.nextInt();
+        entree.nextLine();
 
         // Redemande si le nombre entré par l'utilisateur n'est pas compris entre 1 et 10
         while (nb > 10 || nb < 1) {
             System.out.print("Merci de répondre entre 1 et 10 ? ");
-            nb = lecteur.nextInt();
-            lecteur.nextLine();
+            nb = entree.nextInt();
+            entree.nextLine();
         }
 
 
         // Choix entre entrainement et exercice
         System.out.print("Entrainement 1 ou exercice 2 ? ");
-        modeEntOuExo = lecteur.nextInt();
-        lecteur.nextLine();
+        modeEntOuExo = entree.nextInt();
+        entree.nextLine();
 
         // Redemande si le nombre entré par l'utilisateur n'est pas compris entre 1 et 10
         while (modeEntOuExo != 1 && modeEntOuExo != 2) {
             System.out.print("Merci de répondre par 1 ou 2 ? ");
-            modeEntOuExo = lecteur.nextInt();
-            lecteur.nextLine();
+            modeEntOuExo = entree.nextInt();
+            entree.nextLine();
         }
 
         // Création de la table selon le mode
@@ -70,8 +68,8 @@ public class TestTableDeMultiplication {
 
         // Choix entre mode avec ou sans erreur
         System.out.print("Mode sans erreur true ou false ? ");
-        modeSansErreur = lecteur.nextBoolean();
-        lecteur.nextLine();
+        modeSansErreur = entree.nextBoolean();
+        entree.nextLine();
 
 
         TableDeMultiplication table = new TableDeMultiplication(nb,estMelange, modeSansErreur);

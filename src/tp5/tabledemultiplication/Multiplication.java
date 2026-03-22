@@ -21,7 +21,7 @@ public class Multiplication {
     // === Méthodes Setters ===
 
     public void setReponseUtilisateur(int reponse) throws ErreurMultiplicationException {
-        if (reponseUtilisateur != null && reponse != reponseUtilisateur) {
+        if (modeSansErreur && reponse != terme1*terme2) {
             throw new ErreurMultiplicationException("Votre réponse n'est pas correcte, réessayer !");
         }
         this.reponseUtilisateur = reponse;
