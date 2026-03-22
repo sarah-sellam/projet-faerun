@@ -2,7 +2,15 @@ package tp3.billeterie;
 
 import java.util.ArrayList;
 
+/**
+ * Classe TestBillet, classe de test des classes Billet, BilletReduit et Trajet.
+ * @author Sarah Sellam
+ */
 public class TestBillet {
+    /**
+     * procédure principale
+     * @param args  arguments
+     */
     public static void main(String[] args) {
         // Creation d'une liste de trajets
         ArrayList<Trajet> trajets = new ArrayList<>();

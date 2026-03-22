@@ -1,5 +1,10 @@
 package tp3.billeterie;
 
+
+/**
+ * Classe Trajet, classe de gestion des trajets.
+ * @author Sarah Sellam
+ */
 public class Trajet {
 
     public static final int DISTANCE_MIN = 5;
@@ -13,6 +18,12 @@ public class Trajet {
     //========================================================
     // === Constructeurs ===
 
+    /**
+     * Construire un objet de type Trajet, à partir du départ, de l'arrivée et de la distance d'un trajet.
+     * @param depart    le départ du trajet
+     * @param arrivee   l'arrivée du trajet
+     * @param distance  la distance du trajet
+     */
     public Trajet(String depart, String arrivee, int distance) {
         this.setDepart(depart);
         this.setArrivee(arrivee);
@@ -94,6 +105,11 @@ public class Trajet {
     //========================================================
     // === Autres Méthodes ===
 
+    /**
+     * Redéfinition de la méthode toString() pour l'affichage d'un Trajet sous la forme :
+     * "  Trajet : départ -> arrivée (distance en km)"
+     * @return  affichage d'un trajet
+     */
     @Override
     public String toString() {
         return this.getClass().getSimpleName() + " : " + getDepart() + " -> " + getArrivee() + " (" + getDistance() + " km)";
