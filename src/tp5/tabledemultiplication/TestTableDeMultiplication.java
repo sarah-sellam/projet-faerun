@@ -2,9 +2,19 @@ package tp5.tabledemultiplication;
 
 import java.util.Scanner;
 
+
+/**
+ * Classe TestTabledeMultiplication, classe de test des classes Multiplication et TableDeMultiplication.
+ * @author Sarah Sellam
+ */
 public class TestTableDeMultiplication {
     private static Scanner entree = new Scanner(System.in);
 
+    /**
+     * Demande une réponse d'une table de multiplication à l'utilisateur ;
+     * Lève une exception et envoie un message si la réponse donnée n'est pas bonne
+     * @param multiplication    multiplication dont on demande la réponse
+     */
     private static void demandeReponseUtilisateur(Multiplication multiplication){
         // Affichage de la multiplication
         // (Cela appellera automatiquement la méthode toString() sur l'objet)
@@ -27,6 +37,11 @@ public class TestTableDeMultiplication {
     }
 
 
+    /**
+     * procédure principale
+     * @param args  arguments
+     * @throws ErreurMultiplicationException    exception sur Multiplication
+     */
     public static void main(String[] args) throws ErreurMultiplicationException {
 
         int nb;
