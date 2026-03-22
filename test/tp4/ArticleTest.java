@@ -4,8 +4,18 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Classe ArticleTest, classe de tests unitaires sur la classe Article
+ * @author Sarah Sellam
+ */
 class ArticleTest {
 
+    /**
+     * Tests unitaires sur l'intitulé d'un article :
+     * Un intitulé doit avoir la première lettre en majuscule et le reste en minuscule.
+     * @throws IntituleException    exception sur l'intitulé
+     * @throws PrixException    exception sur le prix
+     */
     @Test
     void getIntitule() throws IntituleException, PrixException {
 
@@ -20,6 +30,12 @@ class ArticleTest {
 
     }
 
+    /**
+     * Tests unitaires sur la modification de l'intitulé d'un article :
+     * l'intitulé ne peut pas être nul ou vide.
+     * @throws IntituleException    exception sur l'intitulé
+     * @throws PrixException    exception sur le prix
+     */
     @Test
     void setIntitule() throws IntituleException, PrixException {
 
@@ -39,7 +55,12 @@ class ArticleTest {
 
     }
 
-
+    /**
+     * Tests unitaires sur le prix d'un article :
+     * le prix doit être différend si la quantité demandée est supérieure à 100.
+     * @throws PrixException    exception sur le prix
+     * @throws IntituleException    exception sur l'intitulé
+     */
     @Test
     void getPrix() throws PrixException, IntituleException {
 
@@ -48,6 +69,10 @@ class ArticleTest {
         assertFalse(article3.getPrix(127)==article3.getPrix(5));
     }
 
+    /**
+     * Tests unitaires sur la modification du prix d'un article :
+     * un prix ne peut pas être null ou négatif.
+     */
     @Test
     void setPrix() {
 
@@ -66,6 +91,12 @@ class ArticleTest {
 
     }
 
+    /**
+     * Test unitaires de la méthode existQuantite() :
+     * vérifier que la quantité est disponible en stock.
+     *  * @throws PrixException    exception sur le prix
+     * @throws IntituleException    exception sur l'intitulé
+     */
     @Test
     void existQuantite() throws PrixException, IntituleException {
         Article article4 = new Article ("article 4", 15, 150);
@@ -74,6 +105,14 @@ class ArticleTest {
         assertFalse(article4.existQuantite(151));
     }
 
+    /**
+     * Tests unitaire sur la méthode removeQuantite() :
+     * vérifier que le stock est suffisant après qu'on ait retiré une certaine quantité ;
+     * lever un exception lorsque la quantité disponible est insuffisante.
+     * @throws PrixException    exception sur le prix
+     * @throws IntituleException    exception sur l'intitulé
+     * @throws StockException   exception sur le stock
+     */
     @Test
     void removeQuantite() throws PrixException, IntituleException, StockException {
 

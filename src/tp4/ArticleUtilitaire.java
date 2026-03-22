@@ -1,5 +1,9 @@
 package tp4;
 
+/**
+ * Classe Utilitaire
+ * @author Sarah Sellam
+ */
 public class ArticleUtilitaire {
 
     /**
