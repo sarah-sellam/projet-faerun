@@ -8,7 +8,7 @@ import java.util.Comparator;
  * Classe Dalton, de définition d'un dalton.
  * @author Sarah Sellam
  */
-public class Dalton {
+public class Dalton implements Comparable<Dalton>{
     private String nom;
 
     private Taille taille;
@@ -49,7 +49,21 @@ public class Dalton {
     }
 
     //========================================================
-    // === Comparateur static final pour les noms ===
+    // === Comparaisons ===
+
+    @Override
+    public int compareTo(Dalton dalton) {
+        if(this.taille != dalton.getTaille()) {
+            if (this.taille == Taille.PETIT || dalton.getTaille() == Taille.GRAND) {
+                return -1;
+            }
+            if (this.taille == Taille.GRAND || dalton.getTaille() == Taille.PETIT) {
+                return 1;
+            }
+        }
+        return this.nom.compareTo(dalton.getNom());
+    }
+
 
     public static final Comparator<Dalton> comparateurNomSolution2 = new Comparator<Dalton>() {
         @Override
