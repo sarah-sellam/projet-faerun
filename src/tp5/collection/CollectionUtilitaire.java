@@ -9,7 +9,7 @@ import java.util.Iterator;
  */
 public class CollectionUtilitaire {
 
-    public static void afficheCollection(String message, Collection<Integer> collection) {
+    public static void afficheCollection(String message, Collection<?> collection) {
         System.out.println(message);
         for (int i = 0 ; i < collection.size() ; i++) {
             System.out.println(collection.stream().toList().get(i));
