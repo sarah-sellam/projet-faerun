@@ -1,6 +1,9 @@
 package tp6;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.logging.Level;
+import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 /**
@@ -12,6 +15,31 @@ public class TestLogging {
     // Récupération du logger
     private static Logger LOGGER = Logger.getLogger(TestLogging.class.getPackageName());
 
+
+    /*
+    // => Option 1 - Soit en modifiant le main pour remplacer la configuration du logger par :
+    // Récupérarion du gestionnaire de logs
+    private static final LogManager logManager = LogManager.getLogManager();
+
+    // Configuration du logger
+    static{
+        try {
+            logManager.readConfiguration( new FileInputStream("conf/debug-logging.properties") );
+        } catch ( IOException exception ) {
+            LOGGER.log( Level.SEVERE, "Cannot read configuration file", exception );
+        }
+    }
+    */
+
+    // Configuration du logger
+//    static {
+//        LOGGER.setLevel(Level.WARNING);
+//    }
+//    // Configuration du logger
+//    static {
+//        System.setProperty("java.util.logging.SimpleFormatter.format", "[%1$s] %4$-10s | (%3$s) %2$-15s | %5$s\n");
+//        LOGGER.setLevel(Level.WARNING);
+//    }
     /**
      * procédure principale
      * @param args  arguments
