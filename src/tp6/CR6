@@ -1,0 +1,73 @@
+librairie java.util.logging
+Le tutoriel de Koor.fr : Utilisation du package java.util.logging.
+La documentation officielle : Core Libraries - Java Logging Overview.
+
+Dans un premier temps, vous allez récupérer le logger dans votre classe.
+Pour récupérer ce logger, il faut utiliser la méthode statique Logger.getLogger(...) du package java.util.logging. Cette méthode accepte en paramètre une chaîne de caractères : Il s’agit du nom du logger.
+Dans l’exemple suivant, nous avons nommé le logger avec le nom du package contenant la classe TestLogging.
+
+Dans un deuxième temps, vous utiliserez ce logger dans le main pour afficher un message : “Mon premier log !“ en rajoutant la ligne suivante :
+LOGGER.log(Level.INFO, "Mon premier log !" );
+_____________________________________________________________________________________________
+Base de TestLogging avec récupération du logger :
+
+import java.util.logging.Logger;
+
+public class TestLogging {
+  // Récupération du logger
+  private static Logger LOGGER = Logger.getLogger(TestLogging.class.getPackageName());
+
+  public static void main(String[] args) {
+    // TODO Utiliser le logger...
+    LOGGER.log(Level.INFO, "Mon premier log !" );
+  }
+}
+_____________________________________________________________________________________________
+
+
+Affichage de la trace obtenu pour le premier run :
+_____________________________________________________________________________________________
+  May 02, 2025 9:28:15 PM tp6.TestLogging main
+  INFO: Mon premier log !
+_____________________________________________________________________________________________
+
+
+
+Il existe différents niveaux de logs.
+Par ordre décroissant d’importance :
+    SEVERE (highest value)
+    WARNING
+    INFO
+    CONFIG
+    FINE
+    FINER
+    FINEST (lowest value)
+Pour plus de détails, consultez la documentation de la classe java.util.logging.LEVEL.
+
+
+modifier la granularité d’affichage des logs en utilisant la méthode setLevel(…) du Logger pour définir le niveau minimal de log à afficher.
+C’est-à-dire que : seuls les messages ayant ce niveau ou un niveau plus élevé seront affichés.
+Les instructions de log de niveau inférieur peuvent rester dans le code, mais elles ne seront simplement pas affichées à l’exécution.
+
+ex :
+// Configuration du logger
+static {
+  LOGGER.setLevel(Level.WARNING);
+}
+
+
+
+Par défaut, la classe SimpleFormatter affiche un log sur deux lignes avec un format bien précis. Avec cette ligne de configuration (System.setProperty(...)), nous changeons le format des logs produits.
+
+La syntaxe de définition du format ressemble à celle utilisée par la méthode System.out.printf avec l’ajout d’index (entre les caractères % et $).
+Ces index correspondent à :
+
+    La date de production du log
+    La source (nom du type et nom de la méthode) si elle est connue, ou bien le nom du logger
+    Le nom du logger
+    Le niveau du log (INFO, WARNING, SEVERE, …)
+    (Dans l’exemple ci-dessus, %4$-10s permet de l’afficher sur 10 caractères et aligné par la gauche grâce au -)
+    Le message du log
+    L’exception associée, si elle est spécifiée
+
+Pour plus de détails : JavaDoc SimpleFormatter.
