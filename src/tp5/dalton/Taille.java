@@ -15,7 +15,7 @@ public enum Taille {
      * Construire un objet de type Taille avec un libellée
      * @param libelle   libellé de la taille
      */
-    private Taille(String libelle) {
+    Taille(String libelle) {
         this.libelle = libelle;
     }
 
