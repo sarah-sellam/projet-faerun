@@ -66,7 +66,7 @@ public class Multiplication {
      */
     @Override
     public String toString() {
-        return terme1 + " x " + terme2 + " = ";
+        return terme1 + " * " + terme2 + " = ";
     }
 
 }
