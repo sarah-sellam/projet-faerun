@@ -42,7 +42,7 @@ public abstract class Operation {
     }
 
     public boolean isReponseJuste() {
-        return reponseUtilisateur == terme1*terme2;
+        return reponseUtilisateur == calculResultat();
     }
 
     public abstract double calculResultat();
