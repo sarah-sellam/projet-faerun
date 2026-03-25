@@ -1,7 +1,5 @@
 package tp6.tabledoperation;
 
-import tp5.tabledemultiplication.Multiplication;
-
 import java.util.ArrayList;
 
 public class TableDOperation {
@@ -16,6 +14,8 @@ public class TableDOperation {
 
     TableDOperation(OperationEnum typeOperation) {
         this.typeOperation = typeOperation;
+
+        initialisation();
     }
 
 
@@ -45,8 +45,21 @@ public class TableDOperation {
     // === Autres Méthodes ===
 
     private void initialisation() {
-        for ( int i = 1 ; i <= NB_OP ; i++ ) {
-            operations.add( new Operation( OperationUtilitaire.arrondir(OperationUtilitaire.randomDouble()) , OperationUtilitaire.arrondir(OperationUtilitaire.randomDouble()) ) );
+        if ( typeOperation == OperationEnum.ADDITION ) {
+            for ( int i = 1 ; i <= NB_OP ; i++ ) {
+                operations.add( new Addition( OperationUtilitaire.arrondir(OperationUtilitaire.randomDouble()) ,
+                        OperationUtilitaire.arrondir(OperationUtilitaire.randomDouble()) ) );
+            }
+        } else if ( typeOperation == OperationEnum.SOUSTRACTION ) {
+            for ( int i = 1 ; i <= NB_OP ; i++ ) {
+                operations.add( new Soustraction( OperationUtilitaire.arrondir(OperationUtilitaire.randomDouble()) ,
+                        OperationUtilitaire.arrondir(OperationUtilitaire.randomDouble()) ) );
+            }
+        } else {
+            for ( int i = 1 ; i <= NB_OP ; i++ ) {
+                operations.add( new Multiplication( (int)(OperationUtilitaire.randomDouble()) ,
+                        (int)(OperationUtilitaire.randomDouble()) ) );
+            }
         }
 
     }
