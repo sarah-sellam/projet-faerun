@@ -1,0 +1,27 @@
+Menu : Essentiel - 8.0 euros
+	Entree : Taboulé
+	Plat principal : Paupiette de veau aux olives et son gratin
+
+Menu : Inspiration - 12.0 euros
+	Entree : Croquettes de carottes
+	Plat principal : Filet de lieu sauce armoricaine et son riz
+
+Menu : Gourmand - 22.0 euros
+	Entree : Chèvre en feuilleté
+	Plat principal : Crumble de ravioles/épinards
+	Dessert : Brownies aux noix
+
+Nos entrées :
+	Taboulé - 3.0 euros
+	Croquettes de carottes - 6.0 euros
+	Chèvre en feuilleté - 9.0 euros
+
+Nos plats :
+	Paupiette de veau aux olives et son gratin - 6.0 euros
+	Filet de lieu sauce armoricaine et son riz - 9.0 euros
+	Crumble de ravioles/épinards - 12.0 euros
+
+Nos desserts :
+	Fondant au chocolat - 3.0 euros
+	Flan pâtissier traditionnel - 5.0 euros
+	Brownies aux noix - 6.0 euros
