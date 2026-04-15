@@ -13,7 +13,7 @@ public class GuerrierUtilitaire {
      *
      * @param unite guerrier dont on veut connaître le nombre de points de vie.
      */
-    public static void prixUnite(Guerrier unite) {
+    public static void printUnite(Guerrier unite) {
         System.out.println("Points de vie : " + unite.getPointsDeVie() );
     }
 

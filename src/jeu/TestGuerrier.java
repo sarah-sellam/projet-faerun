@@ -20,7 +20,7 @@ public class TestGuerrier {
         guerrier1.attaquer(guerrier2);
 
         // affichage de l'état du guerrier 2
-        GuerrierUtilitaire.prixUnite(guerrier2);
+        GuerrierUtilitaire.printUnite(guerrier2);
 
         // itération simulant un combat entre ces 2 guerriers
         // arrêt de l'itération étant provoqué par la mort de l'un des 2 guerriers.
