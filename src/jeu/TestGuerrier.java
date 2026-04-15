@@ -1,6 +1,15 @@
 package jeu;
 
+/**
+ * La classe TestGuerrier, classe de test des classes Guerrier et GuerrierUtilitaire.
+ *
+ * @author Sarah Sellam
+ */
 public class TestGuerrier {
+    /**
+     * Procédure principale.
+     * @param args  arguments
+     */
     public static void main(String[] args) {
 
         // création de 2 objets de type Guerrier

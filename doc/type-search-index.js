@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"exercice1","l":"Carte"},{"p":"exercice1","l":"CarteUtilitaire"},{"p":"exercice1","l":"MenuComplet"},{"p":"exercice1","l":"MenuDeBase"},{"p":"exercice1","l":"Plat"},{"p":"exercice1","l":"PlatException"},{"p":"exercice1","l":"TestCarte"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"jeu","l":"Guerrier"},{"p":"jeu","l":"GuerrierUtilitaire"},{"p":"jeu","l":"TestGuerrier"}];updateSearchResults();
