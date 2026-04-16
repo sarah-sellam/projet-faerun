@@ -16,7 +16,7 @@ public class Enfant implements Serializable {
 
     public Enfant(String nom) {
         this.nom = nom;
-        seances = new HashSet<>();
+        this.seances = new HashSet<>();
     }
 
     public String getNom() {
