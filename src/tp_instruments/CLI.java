@@ -338,6 +338,12 @@ public final class CLI {
 
             // TODO: à compléter
 
+            HashSet<Jour> joursOccupes = enf.getJoursOccupes();
+            System.out.println(joursOccupes);
+            for (Jour jour : joursOccupes) {
+                System.out.println(" - [" + jour + " ] " + enf.getNom());
+            }
+
             System.out.println();
         }
         System.out.flush();

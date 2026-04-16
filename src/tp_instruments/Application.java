@@ -76,6 +76,16 @@ public class Application implements Serializable {
 
     private void ajouterInstrumentEnfant() {
         // TODO: à implémenter
+        // trouver jours dispo de l'enfant
+        // puis instruments
+
+        String nomInstrument = CLI.saisirNouvelInstrument(this.getInstruments().keySet());
+        this.nouvelInstrument(nomInstrument);
+        CLI.informerUtilisateur(
+                String.join(" ", List.of("tp_instruments.Instrument", nomInstrument, "créé.")),
+                true
+        );
+
     }
 
     private void afficherInscriptionsEnfants() {
