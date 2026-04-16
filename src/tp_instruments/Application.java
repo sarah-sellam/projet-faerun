@@ -60,7 +60,7 @@ public class Application implements Serializable {
         String nomInstrument = CLI.saisirNouvelInstrument(this.getInstruments().keySet());
         this.nouvelInstrument(nomInstrument);
         CLI.informerUtilisateur(
-                String.join(" ", List.of("fr.uga.iut2.instruments.Instrument", nomInstrument, "créé.")),
+                String.join(" ", List.of("tp_instruments.Instrument", nomInstrument, "créé.")),
                 true
         );
     }
@@ -69,7 +69,7 @@ public class Application implements Serializable {
         String nomEnfant = CLI.saisirNouvelEnfant(this.getEnfants().keySet());
         this.nouvelEnfant(nomEnfant);
         CLI.informerUtilisateur(
-                String.join(" ", List.of("fr.uga.iut2.instruments.Enfant", nomEnfant, "créé.")),
+                String.join(" ", List.of("tp_instruments.Enfant", nomEnfant, "créé.")),
                 true
         );
     }

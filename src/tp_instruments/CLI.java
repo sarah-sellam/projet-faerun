@@ -3,7 +3,7 @@ package tp_instruments;
 import java.util.*;
 
 /**
- * La classe fr.uga.iut2.instruments.CLI est responsable des interactions avec l'utilisa·teur/trice.
+ * La classe tp_instruments.CLI est responsable des interactions avec l'utilisa·teur/trice.
  *
  * Cette classe concentre est l'unique « vue » de l'application.
  * <p>
@@ -38,7 +38,7 @@ public final class CLI {
             result = Commande.values()[cmdId];  // may throw ArrayIndexOutOfBoundsException
         }
         catch (NumberFormatException | ArrayIndexOutOfBoundsException ignored) {
-            // attention à garder synchronisé avec l'enum fr.uga.iut2.instruments.Commande
+            // attention à garder synchronisé avec l'enum tp_instruments.Commande
             System.out.println("Choix non valide : merci d'entrer un entier entre 0 et 5.");
             System.out.flush();
             result = null;
@@ -53,7 +53,7 @@ public final class CLI {
      */
     public static Commande lireCommande() {
         List<String> lignesEntete = List.of(
-                // attention à garder synchronisé avec l'enum fr.uga.iut2.instruments.Commande
+                // attention à garder synchronisé avec l'enum tp_instruments.Commande
                 "******************************************************************",
                 "*       Association de musique - Découverte d'instruments        *",
                 "******************************************************************",
