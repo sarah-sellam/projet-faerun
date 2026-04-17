@@ -1,17 +1,13 @@
 package jeu;
 
 /**
- * La classe ChefElfe, de définition et de gestion des chefs elfes de la bataille de Faërun.
- * Elle hérite de la classe Elfe.
- *
+ * La classe ChefElfe, de définition et de gestion des chefs elfes de la bataille de Faërun (elle hérite de la classe Elfe).
  * @author Sarah Sellam
  */
 public class ChefElfe extends Elfe {
 
     /**
-     * Redéfinition du getter getFroce() de la classe mère Elfe.
-     * Renvoie la force associée au chef efle courant, qui vaut deux fois celle d'un elfe.
-     *
+     * Redéfinition du getter getForce() de la classe mère Elfe, qui renvoie la force associée au chef elfe courant, soit deux fois celle d'un elfe.
      * @return  la force de l'elfe.
      */
     @Override

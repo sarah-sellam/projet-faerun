@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 /**
  * La classe TestGuerrier, classe de test des classes Guerrier et GuerrierUtilitaire.
- *
  * @author Sarah Sellam
  */
 public class TestGuerrier {

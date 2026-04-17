@@ -3,9 +3,7 @@ package jeu;
 import java.util.Random;
 
 /**
- * La classe GuerrierUtilitaire, classe utilitaire.
- * Toutes les méthodes sont statiques et cette classe n'est pas destinée à être instanciée.
- *
+ * La classe utilitaire GuerrierUtilitaire : toutes les méthodes sont statiques et cette classe n'est pas destinée à être instanciée.
  * @author Sarah Sellam
  */
 public class GuerrierUtilitaire {
@@ -14,7 +12,6 @@ public class GuerrierUtilitaire {
 
     /**
      * Affiche le nombre de points de vie de l’unité (du guerrier) passé en paramètre.
-     *
      * @param unite guerrier dont on veut connaître le nombre de points de vie.
      */
     public static void printUnite(Guerrier unite) {
@@ -23,7 +20,6 @@ public class GuerrierUtilitaire {
 
     /**
      * Renvoie un entier entre 1 et 3, représentant la valeur obtenu suite au lancer d’un "dé de 3" (dé à 3 faces).
-     *
      * @return  une valeur entre 1 et 3 compris.
      */
     public static int de3() {
@@ -32,7 +28,6 @@ public class GuerrierUtilitaire {
 
     /**
      * Renvoie la somme des valeurs obtenues suite à un certain nombre de lancers (nbLancers, donné en paramètre) d'un "dé de 3" (dé à 3 faces).
-     *
      * @param nbLancers nombre de lancés du dé
      * @return  la somme des valeurs obtenues suite à un certain nombre de lancers d'un dé à 3 faces.
      */
