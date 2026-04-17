@@ -2,10 +2,11 @@ package jeu;
 
 /**
  * La classe Guerrier, de définition et de gestion des guerriers de la bataille de Faërun.
+ * Il s'agit d'une classe abstraite, classe mère des classes Nain, ChefNain, Elfe et ChefElfe.
  *
  * @author Sarah Sellam
  */
-public class Guerrier {
+public abstract class Guerrier {
 
     /**
      * force est attribut privé, de type entier, désignant la force d'un guerrier.
