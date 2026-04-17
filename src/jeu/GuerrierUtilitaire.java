@@ -1,5 +1,7 @@
 package jeu;
 
+import java.util.Random;
+
 /**
  * La classe GuerrierUtilitaire, classe utilitaire.
  * Toutes les méthodes sont statiques et cette classe n'est pas destinée à être instanciée.
@@ -7,6 +9,8 @@ package jeu;
  * @author Sarah Sellam
  */
 public class GuerrierUtilitaire {
+    // Attribut contenant un objet de type random
+    private static final Random RANDOM = new Random();
 
     /**
      * Affiche le nombre de points de vie de l’unité (du guerrier) passé en paramètre.
@@ -23,7 +27,7 @@ public class GuerrierUtilitaire {
      * @return  une valeur entre 1 et 3 compris.
      */
     public static int de3() {
-        return 1 + (int)(Math.random() * (4 - 1) );
+        return RANDOM.nextInt(3) + 1 ;
     }
 
     /**
