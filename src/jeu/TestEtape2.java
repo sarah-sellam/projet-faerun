@@ -20,15 +20,12 @@ public class TestEtape2 {
 
         // définition du tour
         int tour = 1;
-/*
 
         //========================================================================================
         // Simulation d'un combat entre un Nain et un Elfe
         System.out.println("==================================================");
         System.out.println("Simulation d'un combat entre un Nain et un Elfe : ");
         System.out.println();
-
-
 
         // affichage de l'état initial de guerriers avant le combat
         System.out.println("Etat inital des guerriers : ");
@@ -42,16 +39,16 @@ public class TestEtape2 {
             GuerrierUtilitaire.printCombatA2(nain,"Nain", elfe, "Elfe", tour);
             tour++;
         }
-*/
 
+
+
+        // redéfinition du tour
+        tour = 1;
         //========================================================================================
         // Simulation d'un combat entre un Chef Nain et un Chef Elfe
         System.out.println("============================================================");
         System.out.println("Simulation d'un combat entre un Chef Nain et un Chef Elfe : ");
         System.out.println();
-
-        // redéfinition du tour
-        tour = 1;
 
         // affichage de l'état initial de guerriers avant le combat
         System.out.println("Etat inital des guerriers : ");
@@ -63,6 +60,55 @@ public class TestEtape2 {
         // l'arrêt de l'itération étant provoqué par la mort de l'un des 2 guerriers.
         while (chefNain.estVivant() && chefElfe.estVivant()) {
             GuerrierUtilitaire.printCombatA2(chefNain,"Chef Nain", chefElfe, "Chef Elfe", tour);
+            tour++;
+        }
+
+
+
+        // redéfinition du tour
+        tour = 1;
+        nain = new Nain();
+        chefElfe = new ChefElfe();
+        //========================================================================================
+        // Simulation d'un combat entre un Nain et un Chef Elfe
+        System.out.println("============================================================");
+        System.out.println("Simulation d'un combat entre un Nain et un Chef Elfe : ");
+        System.out.println();
+
+        // affichage de l'état initial de guerriers avant le combat
+        System.out.println("Etat inital des guerriers : ");
+        GuerrierUtilitaire.printEtat(nain, "Nain");
+        GuerrierUtilitaire.printEtat(chefElfe, "Chef Elfe");
+        System.out.println();
+
+        // itération simulant un combat entre ces 2 guerriers
+        // l'arrêt de l'itération étant provoqué par la mort de l'un des 2 guerriers.
+        while (nain.estVivant() && chefElfe.estVivant()) {
+            GuerrierUtilitaire.printCombatA2(nain,"Nain", chefElfe, "Chef Elfe", tour);
+            tour++;
+        }
+
+
+        // redéfinition du tour
+        tour = 1;
+        chefNain = new ChefNain();
+        elfe = new Elfe();
+        //========================================================================================
+        // Simulation d'un combat entre un Chef Nain et un Elfe
+        System.out.println("============================================================");
+        System.out.println("Simulation d'un combat entre un Chef Nain et un Elfe : ");
+        System.out.println();
+
+        // affichage de l'état initial de guerriers avant le combat
+        System.out.println("Etat inital des guerriers : ");
+        GuerrierUtilitaire.printEtat(chefNain, "Chef Nain");
+        GuerrierUtilitaire.printEtat(elfe, "Elfe");
+        System.out.println();
+
+        // itération simulant un combat entre ces 2 guerriers
+        // l'arrêt de l'itération étant provoqué par la mort de l'un des 2 guerriers.
+        while (chefNain.estVivant() && elfe.estVivant()) {
+            GuerrierUtilitaire.printCombatA2(chefNain,"Chef Nain", elfe, "Elfe", tour);
             tour++;
         }
 
