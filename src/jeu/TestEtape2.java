@@ -12,10 +12,12 @@ public class TestEtape2 {
     public static void main(String[] args) {
 
         // création de guerriers de tous types
-        Nain nain = new Nain();
-        ChefNain chefNain = new ChefNain();
-        Elfe elfe = new Elfe();
-        ChefElfe chefElfe = new ChefElfe();
+        Guerrier nain = new Nain();
+        Guerrier chefNain = new ChefNain();
+        Guerrier elfe = new Elfe();
+        Guerrier chefElfe = new ChefElfe();
+
+
 
 
     }
