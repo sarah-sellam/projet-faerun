@@ -22,7 +22,7 @@ public class GuerrierUtilitaire {
      * Renvoie un entier entre 1 et 3, représentant la valeur obtenu suite au lancer d’un "dé de 3" (dé à 3 faces).
      * @return  une valeur entre 1 et 3 compris.
      */
-    public static int de3() {
+    private static int de3() {
         return RANDOM.nextInt(3) + 1 ;
     }
 
