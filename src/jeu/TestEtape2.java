@@ -44,6 +44,29 @@ public class TestEtape2 {
         }
 */
 
+        //========================================================================================
+        // Simulation d'un combat entre un Chef Nain et un Chef Elfe
+        System.out.println("============================================================");
+        System.out.println("Simulation d'un combat entre un Chef Nain et un Chef Elfe : ");
+        System.out.println();
+
+        // redéfinition du tour
+        tour = 1;
+
+        // affichage de l'état initial de guerriers avant le combat
+        System.out.println("Etat inital des guerriers : ");
+        GuerrierUtilitaire.printEtat(chefNain, "Chef Nain");
+        GuerrierUtilitaire.printEtat(chefElfe, "Chef Elfe");
+        System.out.println();
+
+        // itération simulant un combat entre ces 2 guerriers
+        // l'arrêt de l'itération étant provoqué par la mort de l'un des 2 guerriers.
+        while (chefNain.estVivant() && chefElfe.estVivant()) {
+            GuerrierUtilitaire.printCombatA2(chefNain,"Chef Nain", chefElfe, "Chef Elfe", tour);
+            tour++;
+        }
+
+
 
     }
 
