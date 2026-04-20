@@ -73,8 +73,8 @@ public class GuerrierUtilitaire {
         }
         // affichage de l'état des guerriers à chaque fin de tour de l'itération
         System.out.println("Etat des guerriers à la fin du tour :");
-        GuerrierUtilitaire.printEtat(guerrier1, "Guerrier 1");
-        GuerrierUtilitaire.printEtat(guerrier2, "Guerrier 2");
+        GuerrierUtilitaire.printEtat(guerrier1, type1);
+        GuerrierUtilitaire.printEtat(guerrier2, type2);
         System.out.println("-------------------------------------------");
     }
 
