@@ -38,4 +38,44 @@ public class GuerrierUtilitaire {
         }
         return somme;
     }
+
+
+    /**
+     * Affiche l'état d'un guerrier : son type (Nain, Chef Nain, Elfe ou Chef Elfe), suivi de son nombre de points de vie.
+     * @param guerrier  le guerrier
+     * @param type      son type
+     */
+    public static void printEtat(Guerrier guerrier, String type) {
+        System.out.print(type + " - ");
+        GuerrierUtilitaire.printUnite(guerrier);
+    }
+
+
+    /**
+     * Réalise une itération simulant un combat entre 2 guerriers passés en paramètres avec que leurs types respectifs (nain, chef nain, elfe ou chef elfe), tout en affichant de l'état des guerriers à chaque tour de l’itération, l’arrêt de l’itération étant provoqué par la mort de l’un des 2 guerriers.
+     * @param guerrier1     premier guerrier participant au combat.
+     * @param guerrier2     deuxième guerrier participant au combat.
+     */
+    public static void printCombatA2(Guerrier guerrier1, String type1, Guerrier guerrier2, String type2, int tour) {
+
+        System.out.println("TOUR N°" + tour + " : ");
+        System.out.println();
+
+        // combat : attaques chacun son tour
+        if (tour % 2 != 0) {
+            System.out.println("Un " + type2 + " attaque un " + type1 + " !");
+            System.out.println();
+            guerrier2.attaquer(guerrier1);
+        } else {
+            System.out.println("Un " + type1 + " attaque un " + type2 + " !");
+            System.out.println();
+            guerrier1.attaquer(guerrier2);
+        }
+        // affichage de l'état des guerriers à chaque fin de tour de l'itération
+        System.out.println("Etat des guerriers à la fin du tour :");
+        GuerrierUtilitaire.printEtat(guerrier1, "Guerrier 1");
+        GuerrierUtilitaire.printEtat(guerrier2, "Guerrier 2");
+        System.out.println("-------------------------------------------");
+    }
+
 }
