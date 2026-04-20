@@ -12,7 +12,6 @@ public class TestGuerrier {
      * @param args  arguments
      */
     public static void main(String[] args) {
-        Scanner lecteur = new Scanner(System.in);
 
         // création de 2 objets de type Guerrier
         Guerrier guerrier1 = new Guerrier();
