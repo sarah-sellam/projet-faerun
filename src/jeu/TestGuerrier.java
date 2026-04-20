@@ -63,9 +63,9 @@ public class TestGuerrier {
 
             // affichage de l'état des guerriers à chaque tour de l'itération
             System.out.println("Etat des guerriers à la fin du tour :");
-            System.out.println("Guerrier 1 : ");
+            System.out.print("Guerrier 1 - ");
             GuerrierUtilitaire.printUnite(guerrier1);
-            System.out.println("Guerrier 2 : ");
+            System.out.print("Guerrier 2 : ");
             GuerrierUtilitaire.printUnite(guerrier2);
             System.out.println("-------------------------------------------");
 
