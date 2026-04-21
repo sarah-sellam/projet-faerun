@@ -29,4 +29,14 @@ public class Chateau {
      * guerriersNovices est attribut privé, de type ArrayList de Guerriers , contenant les guerriers novices d'un chateau.
      */
     private ArrayList<Guerrier> guerriersNovices;
+
+
+    /**
+     * Initialise un nouvel objet Chateau, dont la couleur est initialisée à partir de la couleur passée en paramètre et le nombre de ressources est initialisé grâce à la constante RESSOURCES_INITIAL.
+     * @param couleur la couleur du chateau.
+     */
+    public Chateau(Couleur couleur) {
+        this.couleur = couleur;
+        this.ressources = RESSOURCES_INITIAL;
+    }
 }
