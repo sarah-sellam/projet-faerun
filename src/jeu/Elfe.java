@@ -7,6 +7,12 @@ package jeu;
 public class Elfe extends Guerrier {
 
     /**
+     * Nombre de ressources de base nécessaires pour entraîner un Elfe.
+     */
+    private static final int RESSOURCES = 2;
+
+
+    /**
      * Redéfinition du getter getForce() de la classe mère Guerrier, qui renvoie la force associée à l'Elfe courant, soit deux fois celle du guerrier.
      * @return  la force de l'elfe.
      */
@@ -15,4 +21,12 @@ public class Elfe extends Guerrier {
         return 2 * super.getForce();
     }
 
+
+    /**
+     * Renvoie le nombre de ressources nécessaires pour entraîner un elfe.
+     * @return le nombre de ressources nécessaires pour entraîner un elfe
+     */
+    public int getRessourcesPourEntrainement() {
+        return RESSOURCES;
+    }
 }
