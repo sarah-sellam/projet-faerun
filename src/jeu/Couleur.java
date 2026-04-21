@@ -4,7 +4,7 @@ package jeu;
  * Enumération Couleur, de définition d'une couleur.
  * @author Sarah Sellam
  */
-public enum CouleurEnum {
+public enum Couleur {
     BLEU("Bleu"),
     ROUGE("Rouge");
 
@@ -14,7 +14,7 @@ public enum CouleurEnum {
      * Construire un objet de type Couleur avec un libellée
      * @param libelle   libellé de la couleur
      */
-    CouleurEnum(String libelle) {
+    Couleur(String libelle) {
         this.libelle = libelle;
     }
 
