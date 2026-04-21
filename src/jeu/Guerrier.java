@@ -20,10 +20,7 @@ public abstract class Guerrier {
      */
     private static final int RESSOURCES_BASE = 1;
 
-    /**
-     * force est attribut privé, de type entier, désignant la force d'un guerrier.
-     */
-    private int force;
+
     /**
      * pointsDeVie est attribut privé, de type entier, les points de vie d'un guerrier.
      */
@@ -33,7 +30,6 @@ public abstract class Guerrier {
      * Initialise un nouvel objet Guerrier, dont la force et les pointsDeVie sont respectivement initialisés à 10 et 100.
      */
     public Guerrier() {
-        this.force = 10;
         this.setPointsDeVie(100);
     }
 
@@ -42,7 +38,7 @@ public abstract class Guerrier {
      * @return  la force du Guerrier courant.
      */
     public int getForce() {
-        return force;
+        return FORCE_BASE;
     }
 
     /**
@@ -77,7 +73,7 @@ public abstract class Guerrier {
      * @param autreGuerrier     le Guerrier qui subit l'attaque.
      */
     public void attaquer(Guerrier autreGuerrier) {
-        autreGuerrier.subirDegats( GuerrierUtilitaire.de3(this.force) );
+        autreGuerrier.subirDegats( GuerrierUtilitaire.de3(this.getForce()) );
     }
 
     /**
