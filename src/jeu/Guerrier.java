@@ -86,7 +86,7 @@ public abstract class Guerrier {
 
     /**
      * Fait subir les dégâts passés en paramètre au guerrier courant : on soustrait les dégâts aux points de vie du guerrier concerné.
-     * @param degats    le degats subits par le Guerrier.
+     * @param degats    les degats subits par le Guerrier.
      */
     protected void subirDegats(int degats) {
         int nvDegats = this.getPointsDeVie()-degats;
