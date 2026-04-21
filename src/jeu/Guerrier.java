@@ -34,8 +34,8 @@ public abstract class Guerrier {
     }
 
     /**
-     * Renvoie la force associée au Guerrier courant.
-     * @return  la force du Guerrier courant.
+     * Renvoie la force de base associée au Guerrier courant.
+     * @return  la force de base du Guerrier courant.
      */
     public int getForce() {
         return FORCE_BASE;
@@ -47,6 +47,14 @@ public abstract class Guerrier {
      */
     public int getPointsDeVie() {
         return pointsDeVie;
+    }
+
+    /**
+     * Renvoie le nombre de ressources nécessaires pour entraîner le guerrier courant.
+     * @return le nombre de ressources nécessaires pour entraîner le guerrier courant
+     */
+    public int getRessourcesPourEntrainement() {
+        return RESSOURCES_BASE;
     }
 
     /**
