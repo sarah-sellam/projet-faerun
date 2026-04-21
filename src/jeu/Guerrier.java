@@ -6,6 +6,19 @@ package jeu;
  * @author Sarah Sellam
  */
 public abstract class Guerrier {
+    /**
+     * FORCE_BASE est attribut privé, une constante de type entier, désignant la force de base d'un guerrier.
+     */
+    private static final int FORCE_BASE = 10;
+
+    /**
+     * PV_MAX_BASE est attribut privé, une constante de type entier, désignant les points de vie maximum d'un guerrier.
+     */
+    private static final int PV_MAX_BASE = 100;
+    /**
+     * Nombre de ressources de base nécessaires pour entraîner un guerrier.
+     */
+    private static final int RESSOURCES_BASE = 1;
 
     /**
      * force est attribut privé, de type entier, désignant la force d'un guerrier.
