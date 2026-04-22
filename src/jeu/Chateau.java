@@ -47,6 +47,13 @@ public class Chateau {
 
 
     /**
+     * Incrémente les ressources du château du nombre de ressources ajoutées par tour, à partir de la constante RESSOURCES_AJOUTEE_PAR_TOUR;
+     */
+    private void incrementerRessources() {
+        ressources += RESSOURCES_AJOUTEE_PAR_TOUR;
+    }
+
+    /**
      * Renvoie la couleur du château.
      * @return la couleur du château.
      */
