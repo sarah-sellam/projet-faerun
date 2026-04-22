@@ -53,4 +53,12 @@ public class Chateau {
     public Couleur getCouleur() {
         return couleur;
     }
+
+    /**
+     * Renvoie vrai si le château est de couleur bleue, faux sinon.
+     * @return vrai si le château est de couleur bleue, faux sinon.
+     */
+    public boolean estBleu() {
+        return couleur == Couleur.BLEU;
+    }
 }
