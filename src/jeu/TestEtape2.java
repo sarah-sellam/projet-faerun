@@ -1,7 +1,7 @@
 package jeu;
 
 /**
- * Classe TestEtape2, classe de test des classes Nain, ChefNain, Elfe et ChefElfe.
+ * Classe TestEtape2, classe de test des classes Guerrier, Nain, ChefNain, Elfe et ChefElfe.
  * @author Sarah Sellam
  */
 public class TestEtape2 {
