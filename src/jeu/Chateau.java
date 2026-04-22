@@ -62,6 +62,25 @@ public class Chateau {
         return guerriersNovices;
     }
 
+    /**
+     * Retourne la liste des guerriers entrainés (0 ou plusieurs guerriers) en fonction des ressources disponibles dans la château à un instant i.
+     * @return la liste des guerriers entrainés.
+     */
+    public Collection<Guerrier> entrainer() {
+
+        incrementerRessources();                                     // on incrémente les ressources au début du tour
+        ArrayList<Guerrier> guerriersEntraines = new ArrayList<>();     // on crée une liste de guerriers entrainés
+
+        // tant qu'il y a des guerriers novices et (alors) qu'on a assez de ressources pour les entraîner
+        while (!guerriersNovices.isEmpty() && ressources >= guerriersNovices.get(0).getRessourcesPourEntrainement()) {
+
+            Guerrier guerrierAEntrainer = guerriersNovices.get(0);              // on récupère le premier guerrier de la liste
+            ressources -= guerrierAEntrainer.getRessourcesPourEntrainement();    // on retire le nombre de ressources pour l'entraînement aux ressources du chateau
+            guerriersNovices.remove(0);             // on retire le guerrier entrainé de la liste des novices
+            guerriersEntraines.add(guerrierAEntrainer);     // on l'ajoute à liste des guerriers entrainés
+        }
+        return guerriersEntraines;
+    }
 
     /**
      * Incrémente les ressources du château du nombre de ressources ajoutées par tour, à partir de la constante RESSOURCES_AJOUTEE_PAR_TOUR;
