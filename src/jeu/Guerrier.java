@@ -63,6 +63,14 @@ public abstract class Guerrier {
     }
 
     /**
+     * Renvoie la couleur du château auquel appartient le guerrier.
+     * @return la couleur du château auquel appartient le guerrier.
+     */
+    public Couleur getCouleur() {
+        return chateau.getCouleur();
+    }
+
+    /**
      * Modifie le nombre de points de vie du Guerrier courant : les points de vie ne peuvent pas dépasser PV_MAX_BASE, ni être inférieurs à 0.
      * @param pointsDeVie   le nouveau nombre de points de vie du Guerrier.
      */
