@@ -2,6 +2,10 @@ package jeu;
 
 import java.util.ArrayList;
 
+/**
+ * La classe Chateau, de définition et de gestion des châteaux de la bataille de Faërun.
+ * @author Sarah Sellam
+ */
 public class Chateau {
     /**
      * RESSOURCES_INITIAL est attribut privé, une constante de type entier, désignant le nombre de ressources initial du chateau.
@@ -32,7 +36,7 @@ public class Chateau {
 
 
     /**
-     * Initialise un nouvel objet Chateau, dont la couleur est initialisée à partir de la couleur passée en paramètre et le nombre de ressources est initialisé grâce à la constante RESSOURCES_INITIAL.
+     * Initialise un nouvel objet Chateau, dont la couleur et le nombre de ressources sont respectivement initialisés à partir de la couleur passée en paramètre et la constante RESSOURCES_INITIAL ; la liste des guerriers novices est également initailisée.
      * @param couleur la couleur du chateau.
      */
     public Chateau(Couleur couleur) {
