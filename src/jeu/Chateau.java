@@ -38,7 +38,10 @@ public class Chateau {
     public Chateau(Couleur couleur) {
         this.couleur = couleur;
         this.ressources = RESSOURCES_INITIAL;
+        this.guerriersNovices = new ArrayList<>();
     }
+
+
 
 
     
