@@ -50,7 +50,7 @@ public class Chateau {
      * Ajoute un guerrier novice à la liste des guerriers novices du château.
      * @param guerrier le guerrier novice à ajouter.
      */
-    public void ajouterGuerrierNovice(Guerrier guerrier) {
+    public void ajoutGuerrierNovice(Guerrier guerrier) {
         guerriersNovices.add(guerrier);
     }
 
