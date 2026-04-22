@@ -46,7 +46,11 @@ public class Chateau {
     }
 
 
-
-
-    
+    /**
+     * Renvoie la couleur du château.
+     * @return la couleur du château.
+     */
+    public Couleur getCouleur() {
+        return couleur;
+    }
 }
