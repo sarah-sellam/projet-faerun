@@ -85,6 +85,14 @@ public abstract class Guerrier {
     }
 
     /**
+     * Associe le guerrier à un château passé en paramètre.
+     * @param chateau le château auquel appartient le guerrier.
+     */
+    public void setChateau(Chateau chateau) {
+        this.chateau = chateau;
+    }
+
+    /**
      * Renvoie vrai si le Guerrier est vivant (c'est-à-dire que son nombre de points de vie est strictement supérieur à 0), faux sinon.
      * @return  vrai si le Guerrier a encore des points de vie, faux sinon.
      */
