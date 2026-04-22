@@ -92,7 +92,6 @@ public abstract class Guerrier {
         return pointsDeVie > 0;
     }
 
-
     /**
      * Renvoie vrai si le guerrier appartient au chateau de couleur bleue, faux sinon.
      * @return  vrai si le guerrier appartient au chateau de couleur bleue, faux sinon.
@@ -100,6 +99,15 @@ public abstract class Guerrier {
     public boolean estBleu() {
         return this.getCouleur() == Couleur.BLEU;
     }
+
+    /**
+     * Renvoie vrai si le guerrier appartient au chateau de couleur rouge, faux sinon.
+     * @return  vrai si le guerrier appartient au chateau de couleur rouge, faux sinon.
+     */
+    public boolean estRouge() {
+        return this.getCouleur() == Couleur.ROUGE;
+    }
+
     /**
      * Permet au guerrier courant d’attaquer le guerrier passé en paramètre et de lui faire subir des dégâts.
      * Le calcul des dégâts d’une attaque est basé sur la force du guerrier et d’un lancer de dés :
