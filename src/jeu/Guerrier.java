@@ -74,7 +74,7 @@ public abstract class Guerrier {
      * Modifie le nombre de points de vie du Guerrier courant : les points de vie ne peuvent pas dépasser PV_MAX_BASE, ni être inférieurs à 0.
      * @param pointsDeVie   le nouveau nombre de points de vie du Guerrier.
      */
-    public void setPointsDeVie(int pointsDeVie) {
+    private void setPointsDeVie(int pointsDeVie) {
         if (pointsDeVie > PV_MAX_BASE) {
             this.pointsDeVie = PV_MAX_BASE;
         } else if (pointsDeVie < 0) {
