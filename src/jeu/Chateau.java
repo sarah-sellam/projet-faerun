@@ -39,4 +39,7 @@ public class Chateau {
         this.couleur = couleur;
         this.ressources = RESSOURCES_INITIAL;
     }
+
+
+    
 }

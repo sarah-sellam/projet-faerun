@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"jeu","l":"Chateau"},{"p":"jeu","l":"ChefElfe"},{"p":"jeu","l":"ChefNain"},{"p":"jeu","l":"CouleurEnum"},{"p":"jeu","l":"Elfe"},{"p":"jeu","l":"Guerrier"},{"p":"jeu","l":"GuerrierUtilitaire"},{"p":"jeu","l":"Nain"},{"p":"jeu","l":"TestEtape2"},{"p":"jeu","l":"TestGuerrier"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"jeu","l":"Chateau"}];updateSearchResults();
