@@ -61,4 +61,12 @@ public class Chateau {
     public boolean estBleu() {
         return couleur == Couleur.BLEU;
     }
+
+    /**
+     * Renvoie vrai si le château est de couleur rouge, faux sinon.
+     * @return vrai si le château est de couleur rouge, faux sinon.
+     */
+    public boolean estRouge() {
+        return couleur == Couleur.ROUGE;
+    }
 }
