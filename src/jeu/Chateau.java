@@ -45,6 +45,14 @@ public class Chateau {
         this.guerriersNovices = new ArrayList<>();
     }
 
+    /**
+     * Ajoute un guerrier novice à la liste des guerriers novices du château.
+     * @param guerrier le guerrier novice à ajouter.
+     */
+    public void ajouterGuerrierNovice(Guerrier guerrier) {
+        guerriersNovices.add(guerrier);
+    }
+
 
     /**
      * Incrémente les ressources du château du nombre de ressources ajoutées par tour, à partir de la constante RESSOURCES_AJOUTEE_PAR_TOUR;
