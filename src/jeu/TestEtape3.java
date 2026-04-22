@@ -11,5 +11,7 @@ public class TestEtape3 {
      */
     public static void main(String[] args) {
 
+        Guerrier nain = new Nain();
+        nain.getCouleur();
     }
 }

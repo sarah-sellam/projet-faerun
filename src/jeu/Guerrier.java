@@ -63,11 +63,15 @@ public abstract class Guerrier {
     }
 
     /**
-     * Renvoie la couleur du château auquel appartient le guerrier.
-     * @return la couleur du château auquel appartient le guerrier.
+     * Renvoie la couleur du château auquel appartient le guerrier, ou renvoie null s'il n'appartient à aucun château.
+     * @return la couleur du château auquel appartient le guerrier, ou null s'il n'appartient à aucun château.
      */
     public Couleur getCouleur() {
-        return chateau.getCouleur();
+        if (chateau != null) {
+            return chateau.getCouleur();
+        } else {
+            return null;
+        }
     }
 
     /**
