@@ -27,10 +27,10 @@ public abstract class Guerrier {
     private int pointsDeVie;
 
     /**
-     * Initialise un nouvel objet Guerrier, dont la force et les pointsDeVie sont respectivement initialisés à 10 et 100.
+     * Initialise un nouvel objet Guerrier, dont les pointsDeVie sont initialisés à 100, grâce à la constante PV_MAX_BASE.
      */
     public Guerrier() {
-        this.setPointsDeVie(100);
+        this.setPointsDeVie(PV_MAX_BASE);
     }
 
     /**
