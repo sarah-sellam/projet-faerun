@@ -1,6 +1,7 @@
 package jeu;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 /**
  * La classe Chateau, de définition et de gestion des châteaux de la bataille de Faërun.
@@ -51,6 +52,14 @@ public class Chateau {
      */
     public void ajouterGuerrierNovice(Guerrier guerrier) {
         guerriersNovices.add(guerrier);
+    }
+
+    /**
+     * Renvoie la liste ordonnée des guerriers novices du château.
+     * @return la liste ordonnée des guerriers novices du château.
+     */
+    public Collection<Guerrier> getGuerriersNovices() {
+        return guerriersNovices;
     }
 
 
