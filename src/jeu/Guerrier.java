@@ -22,9 +22,14 @@ public abstract class Guerrier {
 
 
     /**
-     * pointsDeVie est attribut privé, de type entier, les points de vie d'un guerrier.
+     * pointsDeVie est attribut privé, de type entier, désignant les points de vie d'un guerrier.
      */
     private int pointsDeVie;
+
+    /**
+     * chateau est attribut privé, de type Chateau, désignant le chateau auquel appartient un guerrier.
+     */
+    private Chateau chateau;
 
     /**
      * Initialise un nouvel objet Guerrier, dont les pointsDeVie sont initialisés à 100, grâce à la constante PV_MAX_BASE.
