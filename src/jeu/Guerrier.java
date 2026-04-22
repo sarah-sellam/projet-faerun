@@ -100,11 +100,6 @@ public abstract class Guerrier {
      * @param degats    les degats subits par le Guerrier.
      */
     protected void subirDegats(int degats) {
-        int nvDegats = this.getPointsDeVie()-degats;
-        if (nvDegats >= 0) {
-            this.setPointsDeVie(nvDegats);
-        } else {
-            this.setPointsDeVie(0);
-        }
+        this.setPointsDeVie(this.getPointsDeVie() - degats);
     }
 }
