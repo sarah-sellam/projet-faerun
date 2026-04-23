@@ -46,6 +46,17 @@ public class Plateau {
     }
 
 
+
+    /**
+     * Lance les combats sur tous les carreaux qui sont des champs de bataille.
+     */
+    public void lanceCombat() {
+        for (Carreau carreau : Carreaux) {
+            if (carreau.estChampDeBataille()) {
+                carreau.lanceCombat();
+            }
+        }
+    }
     /**
      * Renvoie la couleur du gagnant.
      * @return la couleur du gagnant.
