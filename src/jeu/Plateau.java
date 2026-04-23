@@ -10,4 +10,15 @@ public class Plateau {
     private ArrayList<Carreau> carreaux;
 
 
+    /**
+     * Château bleu du plateau.
+     */
+    private Chateau chateauBleu;
+
+    /**
+     * Château rouge du plateau.
+     */
+    private Chateau chateauRouge;
+
+
 }
