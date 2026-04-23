@@ -37,6 +37,11 @@ public class Chateau {
 
 
     /**
+     * Nombre de ressources déjà dépensées pour l'entraînement du guerrier novice en cours.
+     */
+    private int ressourcesEnCours = 0;
+
+    /**
      * Initialise un nouvel objet Chateau, dont la couleur et le nombre de ressources sont respectivement initialisés à partir de la couleur passée en paramètre et la constante RESSOURCES_INITIAL ; la liste des guerriers novices est également initailisée.
      * @param couleur la couleur du chateau.
      */
@@ -72,13 +77,23 @@ public class Chateau {
         ArrayList<Guerrier> guerriersEntraines = new ArrayList<>();     // on crée une liste de guerriers entrainés
 
         // tant qu'il y a des guerriers novices et (alors) qu'on a assez de ressources pour les entraîner
-        while (!guerriersNovices.isEmpty() && ressources >= guerriersNovices.get(0).getRessourcesPourEntrainement()) {
+        while (!guerriersNovices.isEmpty() && ressources >0) {
 
             Guerrier guerrierAEntrainer = guerriersNovices.get(0);              // on récupère le premier guerrier de la liste
-            ressources -= guerrierAEntrainer.getRessourcesPourEntrainement();    // on retire le nombre de ressources pour l'entraînement aux ressources du chateau
-            guerriersNovices.remove(0);             // on retire le guerrier entrainé de la liste des novices
-            guerriersEntraines.add(guerrierAEntrainer);     // on l'ajoute à liste des guerriers entrainés
+            int ressourcesNecessaires = guerrierAEntrainer.getRessourcesPourEntrainement();
+
+            if (ressources >= ressourcesNecessaires) {
+                ressources -= ressourcesNecessaires;
+                ressourcesEnCours = 0;
+                guerriersNovices.remove(0);             // on retire le guerrier entrainé de la liste des novices
+                guerriersEntraines.add(guerrierAEntrainer);     // on l'ajoute à liste des guerriers entrainés
+            } else {
+                ressourcesEnCours += ressources;
+                ressources = 0;
+            }
+
         }
+
         return guerriersEntraines;
     }
 

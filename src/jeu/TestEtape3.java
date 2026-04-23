@@ -43,12 +43,20 @@ public class TestEtape3 {
         System.out.println();
 
         // Tour 3 : récupère 1 ressource → 1 disponible
-        // Attendu : 0 elfe entraîné (manque encore 1 ressource pour le 2ème elfe)
+        // Attendu : 0 elfe entraîné (1 ressource dépensée sur le 2ème elfe, manque encore 1)
         entraines = chateau.entrainer();
         System.out.println("Tour 3 - guerriers entraînés : " + entraines.size());
         System.out.println("Attendu : 0");
         System.out.println("Novices restants : " + chateau.getGuerriersNovices().size());
+        System.out.println("Attendu : 1"); // ✅ déjà correct
+
+        // Tour 4 : récupère 1 ressource → 1 disponible
+        // Attendu : 2ème elfe complété (manquait 1 ressource)
+        entraines = chateau.entrainer();
+        System.out.println("Tour 4 - guerriers entraînés : " + entraines.size());
         System.out.println("Attendu : 1");
+        System.out.println("Novices restants : " + chateau.getGuerriersNovices().size());
+        System.out.println("Attendu : 0");
 
     }
 }
