@@ -1,6 +1,7 @@
 package jeu;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Carreau {
 
@@ -123,5 +124,66 @@ public class Carreau {
 
 
 
+
+    /**
+     * Lance un combat sur le carreau entre les guerriers bleus et rouges.
+     * Les bleus attaquent en premier, puis les rouges.
+     * Les guerriers morts sont supprimés du carreau.
+     */
+    public void lanceCombat() {
+        System.out.println("------------------------");
+        System.out.println("COMBAT SUR LE CARREAU :");
+
+        // les bleus attaquent les rouges
+        System.out.println("Les bleus attaquent :");
+        for (Guerrier bleu : guerriersBleus) {
+            boolean attaqueEffectuee = false;
+
+            for (Guerrier rouge : guerriersRouges) {
+                if (!attaqueEffectuee && rouge.estVivant()) {
+                    bleu.attaquer(rouge);
+                    System.out.print(bleu.getNom()
+                            + " attaque " + rouge.getNom()
+                            + " -> ");
+                    GuerrierUtilitaire.printUnite(rouge);
+                    attaqueEffectuee = true;
+                }
+            }
+        }
+
+        // on supprime les rouges morts
+        Iterator<Guerrier> itRouges = guerriersRouges.iterator();
+        while (itRouges.hasNext()) {
+            Guerrier g = itRouges.next();
+            if (!g.estVivant()) {
+                itRouges.remove();
+            }
+        }
+
+        // les rouges attaquent les bleus
+        System.out.println("Les rouges attaquent : ");
+        for (Guerrier rouge : guerriersRouges) {
+            boolean attaqueEffectuee = false;
+
+            for (Guerrier bleu : guerriersBleus) {
+                if (!attaqueEffectuee && bleu.estVivant()) {
+                    rouge.attaquer(bleu);
+                    System.out.println(rouge.getNom()
+                            + " attaque " + bleu.getNom()
+                            + " -> ");
+                    GuerrierUtilitaire.printUnite(bleu);
+                    attaqueEffectuee = true;
+                }
+            }
+        }
+
+        // suppression des bleus morts
+        Iterator<Guerrier> it = guerriersBleus.iterator();
+        while (it.hasNext()) {
+            Guerrier g = it.next();
+            if (!g.estVivant()) {
+                it.remove();
+            }
+        }    }
 
 }
