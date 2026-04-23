@@ -2,6 +2,10 @@ package jeu;
 
 import java.util.ArrayList;
 
+/**
+ * Classe Plateau, de définition et de gestion du plateau du jeu de la bataille de Faërun.
+ * @author Sarah Sellam
+ */
 public class Plateau {
 
     /**

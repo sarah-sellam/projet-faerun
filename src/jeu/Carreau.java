@@ -188,6 +188,7 @@ public class Carreau {
             if (!g.estVivant()) {
                 it.remove();
             }
-        }    }
+        }
+    }
 
 }
