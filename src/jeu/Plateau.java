@@ -7,7 +7,7 @@ public class Plateau {
     /**
      * Liste ordonnée des carreaux du plateau.
      */
-    private ArrayList<Carreau> carreaux;
+    private ArrayList<Carreau> Carreaux;
 
 
     /**
@@ -26,9 +26,9 @@ public class Plateau {
      * @param longueur le nombre de carreaux du plateau.
      */
     public Plateau(int longueur) {
-        this.carreaux = new ArrayList<>();
+        this.Carreaux = new ArrayList<>();
         for (int i = 0 ; i < longueur ; i++ ) {
-            carreaux.add(new Carreau());
+            Carreaux.add(new Carreau());
         }
     }
 
@@ -50,9 +50,9 @@ public class Plateau {
      * @return la liste des carreaux du plateau.
      */
     public Carreau[] getCarreaux() {
-        Carreau[] car = new Carreau[carreaux.size()];
-        for (int i = 0 ; i < carreaux.size() ; i++ ) {
-            car[i] = carreaux.get(i);
+        Carreau[] car = new Carreau[Carreaux.size()];
+        for (int i = 0 ; i < Carreaux.size() ; i++ ) {
+            car[i] = Carreaux.get(i);
         }
         return car;
     }
@@ -62,7 +62,7 @@ public class Plateau {
      * @return  le carreau de départ des bleus.
      */
     private Carreau getDepartBleu() {
-        return carreaux.get(0);
+        return Carreaux.get(0);
     }
 
     /**
@@ -70,6 +70,6 @@ public class Plateau {
      * @return  le carreau de départ des rouges.
      */
     private Carreau getDepartRouge() {
-        return carreaux.get(carreaux.size() - 1);
+        return Carreaux.get(Carreaux.size() - 1);
     }
 }
