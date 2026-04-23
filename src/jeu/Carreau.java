@@ -66,5 +66,15 @@ public class Carreau {
         }
     }
 
+    /**
+     * Retire les guerriers bleus du carreau et renvoie la liste des guerriers bleus retirés.
+     * @return la liste des guerriers bleus retirés.
+     */
+    public Guerrier[] retirerGuerriersBleus() {
+        Guerrier[] guerriersRetires = getGuerriersBleus();
+        guerriersBleus.clear();
+        return guerriersRetires;
+    }
+
 
 }
