@@ -87,4 +87,17 @@ public class Carreau {
     }
 
 
+    /**
+     * Supprime le guerrier, passé en paramètre, du carreau.
+     * @param guerrier le guerrier à supprimer.
+     */
+    public void supprimerGuerrier(Guerrier guerrier) {
+        guerriersBleus.remove(guerrier);
+        guerriersRouges.remove(guerrier);
+    }
+
+
+
+
+
 }
