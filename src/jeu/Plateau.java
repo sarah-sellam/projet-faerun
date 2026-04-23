@@ -53,4 +53,12 @@ public class Plateau {
     private Carreau getDepartBleu() {
         return carreaux.get(0);
     }
+
+    /**
+     * Renvoie le carreau de départ des rouges (dernier carreau).
+     * @return  le carreau de départ des rouges.
+     */
+    private Carreau getDepartRouge() {
+        return carreaux.get(carreaux.size() - 1);
+    }
 }
