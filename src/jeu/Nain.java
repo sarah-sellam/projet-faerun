@@ -7,6 +7,14 @@ package jeu;
 public class Nain extends Guerrier {
 
     /**
+     * Renvoie le nom du guerrier : "Nain".
+     * @return le nom du guerrier : "Nain".
+     */
+    public String getNom() {
+        return "Nain";
+    };
+
+    /**
      * Redéfinition de la méthode subirDegats(int degats) de la classe mère Guerrier, fait subir les dégâts passés en paramètre au nain courant : on divise les dégats par deux car un nain subit deux fois moins de dégats qu'un guerrier de base.
      * @param degats    les degats subits.
      */

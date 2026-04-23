@@ -39,6 +39,12 @@ public abstract class Guerrier {
     }
 
     /**
+     * Renvoie le nom du guerrier : la méthode est abstraire pour que chaque classe fille puisse définir son propre nom : "Nain", "Chef Nain", "Elfe", "Chef Elfe".
+     * @return le nom du guerrier.
+     */
+    public abstract String getNom();
+
+    /**
      * Renvoie la force de base associée au Guerrier courant.
      * @return  la force de base du Guerrier courant.
      */

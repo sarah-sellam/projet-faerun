@@ -13,6 +13,14 @@ public class Elfe extends Guerrier {
 
 
     /**
+     * Renvoie le nom du guerrier : "Elfe".
+     * @return le nom du guerrier : "Elfe".
+     */
+    public String getNom() {
+        return "Elfe";
+    };
+
+    /**
      * Redéfinition du getter getForce() de la classe mère Guerrier, qui renvoie la force associée à l'Elfe courant, soit deux fois celle du guerrier.
      * @return  la force de l'elfe.
      */

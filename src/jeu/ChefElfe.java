@@ -13,6 +13,14 @@ public class ChefElfe extends Elfe {
 
 
     /**
+     * Renvoie le nom du guerrier : "Chef Elfe".
+     * @return le nom du guerrier : "Chef Elfe".
+     */
+    public String getNom() {
+        return "Chef Elfe";
+    };
+
+    /**
      * Redéfinition du getter getForce() de la classe mère Elfe, qui renvoie la force associée au chef elfe courant, soit deux fois celle d'un elfe.
      * @return  la force de l'elfe.
      */
