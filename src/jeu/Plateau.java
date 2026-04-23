@@ -31,4 +31,17 @@ public class Plateau {
             carreaux.add(new Carreau());
         }
     }
+
+
+    /**
+     * Renvoie la liste des carreaux du plateau.
+     * @return la liste des carreaux du plateau.
+     */
+    public Carreau[] getCarreaux() {
+        Carreau[] car = new Carreau[carreaux.size()];
+        for (int i = 0 ; i < carreaux.size() ; i++ ) {
+            car[i] = carreaux.get(i);
+        }
+        return car;
+    }
 }
