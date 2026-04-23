@@ -91,10 +91,8 @@ public class Plateau {
     public Couleur getGagnant() {
         if (getDepartBleu().estRouge()) {
             return Couleur.ROUGE;
-        } else if (getDepartRouge().estBleu()) {
-            return Couleur.BLEU;
         } else {
-            return null;
+            return Couleur.BLEU;
         }
     }
 
