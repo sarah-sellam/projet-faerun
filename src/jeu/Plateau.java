@@ -44,4 +44,13 @@ public class Plateau {
         }
         return car;
     }
+
+
+    /**
+     * Renvoie le carreau de départ des bleus (premier carreau).
+     * @return  le carreau de départ des bleus.
+     */
+    private Carreau getDepartBleu() {
+        return carreaux.get(0);
+    }
 }
