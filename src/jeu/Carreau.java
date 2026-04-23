@@ -33,4 +33,16 @@ public class Carreau {
         }
         return guerriers;
     }
+
+    /**
+     * Renvoie les guerriers rouges présents sur le carreau.
+     * @return les guerriers rouges présents sur le carreau.
+     */
+    public Guerrier[] getGuerriersRouges() {
+        Guerrier[] guerriers = new Guerrier[guerriersRouges.size()];
+        for (int i = 0 ; i < guerriersRouges.size() ; i++ ) {
+            guerriers[i] = guerriersRouges.get(i);
+        }
+        return guerriers;
+    }
 }
