@@ -3,6 +3,10 @@ package jeu;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+/**
+ * La classe Carreau, de définition et de gestion des carreaux d'un plateau du jeu de la bataille de Faërun.
+ * @author Sarah Sellam
+ */
 public class Carreau {
 
     /**
