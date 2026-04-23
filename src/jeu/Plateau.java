@@ -34,6 +34,18 @@ public class Plateau {
 
 
     /**
+     * Renvoie la couleur du gagnant.
+     * @return la couleur du gagnant.
+     */
+    public Couleur getGagnant() {
+        if (getDepartBleu().estRouge()) {
+            return Couleur.BLEU;
+        } else {
+            return Couleur.ROUGE;
+        }
+    }
+
+    /**
      * Renvoie la liste des carreaux du plateau.
      * @return la liste des carreaux du plateau.
      */
@@ -44,7 +56,6 @@ public class Plateau {
         }
         return car;
     }
-
 
     /**
      * Renvoie le carreau de départ des bleus (premier carreau).
