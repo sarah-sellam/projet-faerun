@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"exercice1"},{"l":"jeu"},{"l":"tp_instruments"},{"l":"tp1"},{"l":"tp1.forme"},{"l":"tp1.universite"},{"l":"tp2.contrainte"},{"l":"tp2.telephone"},{"l":"tp2.universite"},{"l":"tp3.billeterie"},{"l":"tp3.etudiant"},{"l":"tp4"},{"l":"tp5.collection"},{"l":"tp5.dalton"},{"l":"tp5.tabledemultiplication"},{"l":"tp6"},{"l":"tp6.tabledoperation"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"jeu"}];updateSearchResults();
