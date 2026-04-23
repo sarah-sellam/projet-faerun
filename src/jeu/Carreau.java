@@ -97,6 +97,15 @@ public class Carreau {
     }
 
 
+    /**
+     * Renvoie vrai si le carreau contient des guerriers rouges, faux sinon.
+     * @return vrai si le carreau contient des guerriers rouges, faux sinon.
+     */
+    public boolean estRouge() {
+        return !guerriersRouges.isEmpty();
+    }
+
+
 
 
 
