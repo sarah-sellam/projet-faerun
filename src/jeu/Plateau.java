@@ -57,6 +57,16 @@ public class Plateau {
             }
         }
     }
+
+    /**
+     * Renvoie vrai si la partie est terminée (les bleus sont sur le dernier carreau ou les rouges sont sur le premier carreau), faux sinon.
+     * @return vrai si la partie est terminée, faux sinon.
+     */
+    public boolean estPartieTerminee() {
+        return getDepartBleu().estRouge() || getDepartRouge().estBleu();
+    }
+
+
     /**
      * Renvoie la couleur du gagnant.
      * @return la couleur du gagnant.
