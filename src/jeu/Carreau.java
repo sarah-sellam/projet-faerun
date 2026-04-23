@@ -45,4 +45,14 @@ public class Carreau {
         }
         return guerriers;
     }
+
+    /**
+     * Ajoute des guerriers bleus sur le carreau.
+     * @param guerriers les guerriers bleus à ajouter.
+     */
+    public void ajoutGuerriersBleus(Guerrier[] guerriers) {
+        for (int i = 0 ; i < guerriers.length ; i++) {
+            guerriersBleus.add(guerriers[i]);
+        }
+    }
 }
