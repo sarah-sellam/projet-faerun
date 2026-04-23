@@ -53,16 +53,19 @@ public class Plateau {
      * Déplace tous les guerriers d'un carreau vers le suivant : les bleus se déplacent de gauche à droite ; les rouges se déplacent de droite à gauche.
      */
     public void deplaceGuerriers() {
-        for (int i = 0 ; i < Carreaux.size() ; i++) {
-            // sens inverse pour les guerriers rouges
+        // déplacement des bleus de droite à gauche
+        for (int i = Carreaux.size() - 1; i >= 0; i--) {
+            if (i < Carreaux.size() - 1 && Carreaux.get(i).estBleu()) {
+                Guerrier[] bleus = Carreaux.get(i).retirerGuerriersBleus();
+                Carreaux.get(i + 1).ajoutGuerriersBleus(bleus);
+            }
+        }
+
+        // déplacement des rouges de gauche à droite
+        for (int i = 0; i < Carreaux.size(); i++) {
             if (i > 0 && Carreaux.get(i).estRouge()) {
                 Guerrier[] rouges = Carreaux.get(i).retirerGuerriersRouges();
-                Carreaux.get(i-1).ajoutGuerriersRouges(rouges);
-            }
-            // sens normal pour les guerriers bleus
-            if (i < Carreaux.size()-1 && Carreaux.get(i).estBleu()) {
-                Guerrier[] bleus = Carreaux.get(i).retirerGuerriersBleus();
-                Carreaux.get(i+1).ajoutGuerriersBleus(bleus);
+                Carreaux.get(i - 1).ajoutGuerriersRouges(rouges);
             }
         }
     }
