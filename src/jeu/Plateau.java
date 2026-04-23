@@ -32,6 +32,19 @@ public class Plateau {
         }
     }
 
+    /**
+     * Ajoute des guerriers d'un chateau sur le carreau de départ correspondant : les bleus partent du carreau 0, les rouges du dernier carreau.
+     * @param chateau   le chateau auquel les guerriers sont ajoutés.
+     * @param guerriers les guerriers à ajouter.
+     */
+    public void ajoutGuerriers(Chateau chateau, Guerrier[] guerriers) {
+        if (chateau.estBleu()) {
+            getDepartBleu().ajoutGuerriersBleus(guerriers);
+        } else {
+            getDepartRouge().ajoutGuerriersRouges(guerriers);
+        }
+    }
+
 
     /**
      * Renvoie la couleur du gagnant.
