@@ -15,6 +15,8 @@ public class TestEtape3 {
 
 //        Guerrier nain = new Nain();
 //        nain.getCouleur();
+
+        /*
         // Château avec 3 ressources initiales
         Chateau chateau = new Chateau(Couleur.BLEU);
 
@@ -57,6 +59,18 @@ public class TestEtape3 {
         System.out.println("Attendu : 1");
         System.out.println("Novices restants : " + chateau.getGuerriersNovices().size());
         System.out.println("Attendu : 0");
+*/
 
+        Chateau chateau = new Chateau(Couleur.BLEU);
+        chateau.ajoutGuerrierNovice(new Nain());
+        chateau.ajoutGuerrierNovice(new Nain());
+        chateau.ajoutGuerrierNovice(new Elfe());
+        chateau.ajoutGuerrierNovice(new Elfe());
+
+        for (int tour = 1; tour <= 3; tour++) {
+            System.out.println("Tour N°" + tour + " : ");
+            chateau.entrainer();
+            System.out.println();
+        }
     }
 }

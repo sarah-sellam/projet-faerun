@@ -87,12 +87,22 @@ public class Chateau {
                 ressourcesEnCours = 0;
                 guerriersNovices.remove(0);             // on retire le guerrier entrainé de la liste des novices
                 guerriersEntraines.add(guerrierAEntrainer);     // on l'ajoute à liste des guerriers entrainés
+                System.out.println("Entrainement : OK (-" + ressourcesNecessaires + " ressource(s))");
             } else {
+                System.out.println("Entrainement : PARTIEL (-" + ressources + " ressource(s))");
                 ressourcesEnCours += ressources;
                 ressources = 0;
             }
 
         }
+
+        if (!guerriersNovices.isEmpty()) {
+            System.out.println("Entrainement impossible pour le moment !");
+        }
+
+        System.out.println("Etat final : " + ressources + " ressources, "
+                            + guerriersEntraines.size() + " guerriers entraînés, "
+                            + guerriersNovices.size() + " novices restants.");
 
         return guerriersEntraines;
     }
