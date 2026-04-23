@@ -21,4 +21,14 @@ public class Plateau {
     private Chateau chateauRouge;
 
 
+    /**
+     * Initialise un nouveau plateau avec un nombre de carreaux donnée en paramètre (longueur).
+     * @param longueur le nombre de carreaux du plateau.
+     */
+    public Plateau(int longueur) {
+        this.carreaux = new ArrayList<>();
+        for (int i = 0 ; i < longueur ; i++ ) {
+            carreaux.add(new Carreau());
+        }
+    }
 }
